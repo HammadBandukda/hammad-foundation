@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 372" width="420" height="372" role="img" aria-label="F Two Hands with 11 in Bebas Neue">
+  <title>F Two Hands with 11 in Bebas Neue</title>
+  <defs>
+    <linearGradient id="tbebas-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6DE8F"/>
+      <stop offset="0.45" stop-color="#D2AB48"/>
+      <stop offset="1" stop-color="#A4802A"/>
+    </linearGradient>
+    <linearGradient id="tbebas-ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#A4802A"/>
+      <stop offset="0.3" stop-color="#D2AB48"/>
+      <stop offset="0.55" stop-color="#F6DE8F"/>
+      <stop offset="0.8" stop-color="#D2AB48"/>
+      <stop offset="1" stop-color="#A4802A"/>
+    </linearGradient>
+    <linearGradient id="tbebas-line" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#279C49"/>
+      <stop offset="1" stop-color="#0F6030"/>
+    </linearGradient>
+    <clipPath id="tbebas-disc"><circle cx="100" cy="100" r="87"/></clipPath>
+  </defs>
+  
+  <g id="hand-left" transform="">
+    <path id="hand-left-extrude" d="M124.7 93.5A92 92 0 0 0 194.0 218.6C199.2 225.2 177.6 227 177.6 234.2V303.5H136.2V237.8C109.19999999999999 219.8 93 177.5 94.8 132.5C95.7 101 102 78.5 112.8 66.8Q121.8 59.599999999999994 124.7 93.5Z" transform="translate(4 3)" fill="#7A5E1C" stroke="#0F6030" stroke-width="2.6" stroke-linejoin="round"/>
+    <path id="hand-left-face" d="M124.7 93.5A92 92 0 0 0 194.0 218.6C199.2 225.2 177.6 227 177.6 234.2V303.5H136.2V237.8C109.19999999999999 219.8 93 177.5 94.8 132.5C95.7 101 102 78.5 112.8 66.8Q121.8 59.599999999999994 124.7 93.5Z" fill="url(#tbebas-gold)" stroke="#0F6030" stroke-width="2.6" stroke-linejoin="round"/>
+    <path id="hand-left-creases" d="M110.99999999999999 165.8Q124.5 183.8 145.2 205.4M118.2 110Q112.8 132.5 114.6 146" fill="none" stroke="#7A5E1C" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+  </g>
+  
+  <g id="hand-right" transform="translate(420 0) scale(-1 1)">
+    <path id="hand-right-extrude" d="M124.7 93.5A92 92 0 0 0 194.0 218.6C199.2 225.2 177.6 227 177.6 234.2V303.5H136.2V237.8C109.19999999999999 219.8 93 177.5 94.8 132.5C95.7 101 102 78.5 112.8 66.8Q121.8 59.599999999999994 124.7 93.5Z" transform="translate(4 3)" fill="#7A5E1C" stroke="#0F6030" stroke-width="2.6" stroke-linejoin="round"/>
+    <path id="hand-right-face" d="M124.7 93.5A92 92 0 0 0 194.0 218.6C199.2 225.2 177.6 227 177.6 234.2V303.5H136.2V237.8C109.19999999999999 219.8 93 177.5 94.8 132.5C95.7 101 102 78.5 112.8 66.8Q121.8 59.599999999999994 124.7 93.5Z" fill="url(#tbebas-gold)" stroke="#0F6030" stroke-width="2.6" stroke-linejoin="round"/>
+    <path id="hand-right-creases" d="M110.99999999999999 165.8Q124.5 183.8 145.2 205.4M118.2 110Q112.8 132.5 114.6 146" fill="none" stroke="#7A5E1C" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+  </g>
+  
+  <g id="emblem" transform="translate(120 38) scale(0.9)">
+    <circle id="emblem-ring" cx="100" cy="100" r="99" fill="#279C49"/>
+    <circle cx="100" cy="100" r="91" fill="#FFFFFF"/>
+    <g id="emblem-quadrants" clip-path="url(#tbebas-disc)">
+      <rect x="100" y="0" width="100" height="100" fill="#279C49"/>
+      <rect x="0" y="100" width="100" height="100" fill="#279C49"/>
+      <path d="M100 0V200M0 100H200" stroke="#FFFFFF" stroke-width="5"/>
+    </g>
+    <g id="icon-roti" transform="rotate(-14 58 64)" stroke="#279C49" stroke-width="3.6" fill="#FFFFFF">
+      <ellipse cx="58" cy="76" rx="31" ry="12"/>
+      <ellipse cx="58" cy="68" rx="31" ry="12"/>
+      <ellipse cx="58" cy="60" rx="31" ry="12"/>
+      <g fill="#279C49" stroke="none">
+        <circle cx="44" cy="58" r="1.8"/><circle cx="54" cy="54" r="1.8"/><circle cx="66" cy="56" r="1.8"/>
+        <circle cx="50" cy="63" r="1.8"/><circle cx="62" cy="63" r="1.8"/><circle cx="74" cy="61" r="1.8"/>
+      </g>
+    </g>
+    <g id="icon-tools" stroke="#FFFFFF" stroke-linecap="round" fill="none">
+      <path d="M124 40L146 62" stroke-width="5"/>
+      <path d="M147 63L161 77" stroke-width="12"/>
+      <path d="M126 82L150 54" stroke-width="7"/>
+      <circle cx="157" cy="46" r="9.5" stroke-width="6"/>
+      <path d="M157 46L168 35" stroke="#279C49" stroke-width="7"/>
+      <circle cx="124" cy="85" r="3" fill="#279C49" stroke="none"/>
+    </g>
+    <g id="icon-tap" fill="#FFFFFF">
+      <rect x="18" y="122" width="7" height="18" rx="1.5"/>
+      <path d="M25 125H66Q82 125 82 141V150H70V142Q70 137 65 137H25Z"/>
+      <rect x="48" y="112" width="6" height="14"/>
+      <rect x="38" y="108" width="26" height="6" rx="3"/>
+      <path d="M76 157C76 157 68 167 68 172A8 8 0 0 0 84 172C84 167 76 157 76 157Z"/>
+    </g>
+    <g id="icon-heart" fill="none" stroke="#279C49" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M142 176C108 154 108 126 124 121C133 118 140 124 142 130C144 124 151 118 160 121C176 126 176 154 142 176Z" stroke-width="5"/>
+      <path d="M114 146H130L135 136L141 160L147 128L152 146H170" stroke-width="3.6"/>
+    </g>
+  </g>
+  
+  <g id="ribbon">
+    <path id="ribbon-tail-left" d="M47.6 278.825L3.5 285.65L20.825 308.4L3.5 333.425L47.6 326.6Z" fill="#7A5E1C"/>
+    <path id="ribbon-tail-right" d="M372.4 278.825L416.5 285.65L399.175 308.4L416.5 333.425L372.4 326.6Z" fill="#7A5E1C"/>
+    <path id="ribbon-band" d="M35 272Q210 321 385 272V317.5Q210 366.5 35 317.5Z" fill="url(#tbebas-ribbon)" stroke="#7A5E1C" stroke-width="1.2"/>
+    <text id="ribbon-11" x="155.75" y="335.63" text-anchor="middle" font-family="'Bebas Neue', 'Arial Black', sans-serif" font-weight="400" font-size="55.7" fill="#0F6030" letter-spacing="0.9">11</text>
+    <text id="ribbon-years" x="241.5" y="331.99" text-anchor="middle" font-family="'Dancing Script', 'Brush Script MT', cursive" font-weight="700" font-size="40.95" fill="#FFFFFF" stroke="#7A5E1C" stroke-width="0.6" paint-order="stroke">Years</text>
+  </g>
+</svg>

@@ -404,7 +404,36 @@ const concepts = [
 ];
 
 // ---------- write standalone SVGs ----------
+
+// ---------- numeral type test: "11" in six bold, minimal sans faces, set flat ----------
+const TYPE_TEST = [
+  { key: "bebas", name: "Bebas Neue", family: "'Bebas Neue'", weight: 400, size: 1.25, note: "Condensed and tall. Matches the competition poster and stays very legible small." },
+  { key: "montserrat", name: "Montserrat Black", family: "'Montserrat'", weight: 900, size: 1.0, note: "Geometric, with a sharp flag on each 1. Already on the website, so it sits naturally in the system." },
+  { key: "onest", name: "Onest ExtraBold", family: "'Onest'", weight: 800, size: 1.02, note: "The website’s main font. Plain, friendly and quietly modern." },
+  { key: "archivo", name: "Archivo Black", family: "'Archivo Black'", weight: 400, size: 0.98, note: "Heavy grotesque with a strong flag on the 1. The most solid and confident." },
+  { key: "outfit", name: "Outfit ExtraBold", family: "'Outfit'", weight: 800, size: 1.05, note: "Clean geometric with soft proportions. The quietest of the six." },
+  { key: "unbounded", name: "Unbounded ExtraBold", family: "'Unbounded'", weight: 800, size: 0.82, note: "Wide and blocky. Big presence, but takes more room beside the emblem." },
+];
+const numeral = (f, x, y, size, fill, anchor = "middle", id = "numeral-11") =>
+  `<text id="${id}" x="${x}" y="${y}" text-anchor="${anchor}" font-family="${f.family}, 'Arial Black', sans-serif" font-weight="${f.weight}" font-size="${(size * f.size).toFixed(1)}" fill="${fill}" letter-spacing="${(size * 0.02).toFixed(1)}">11</text>`;
+function typeSpecimen(p, f) {
+  return svg(p, 240, 150, `
+  <rect id="specimen-bg" width="240" height="150" fill="${C.white}"/>
+  ${numeral(f, 120, 120, 120, `url(#${p}-gold)`)}`, `11 in ${f.name}`);
+}
+function typeOnF(p, f) {
+  const W = 420, H = 372, r = 90, cx = W / 2, cy = 128, rw = 350, rcy = 272;
+  const lead = numeral(f, cx - rw * 0.155, rcy + rw * 0.07 + rw * 0.13 * 0.86, rw * 0.13 * 0.98, C.deep, "middle", "ribbon-11");
+  return svg(p, W, H, `
+  ${hand(p, cx, cy, r, { id: "hand-left" })}
+  ${hand(p, cx, cy, r, { mirror: true, id: "hand-right" })}
+  ${emblem(p, cx - r, cy - r, r * 2)}
+  ${ribbon(p, cx, rcy, rw, { lead })}`, `F Two Hands with 11 in ${f.name}`);
+}
+
 mkdirSync(join(here, "svg"), { recursive: true });
+mkdirSync(join(here, "svg", "type-test"), { recursive: true });
+for (const f of TYPE_TEST) writeFileSync(join(here, "svg", "type-test", `F-11-${f.key}.svg`), typeOnF(`t${f.key}`, f) + "\n");
 for (const c of concepts) {
   writeFileSync(join(here, "svg", c.file), c.build(c.key) + "\n");
 }
@@ -457,7 +486,7 @@ const archived = concepts.filter((c) => ARCHIVED.has(c.key));
 const html = `<title>HF 11 Years Concepts</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Onest:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Dancing+Script:wght@700&family=Montserrat:wght@900&family=Onest:wght@400;500;700;800&family=Outfit:wght@800&family=Unbounded:wght@800&display=swap">
 <style>
 /* Layout: a sketchbook sheet — brief strip, then one wide row per direction, then a 70 px line-up. */
 :root {
@@ -533,6 +562,17 @@ p { margin: 0; }
 .lineup-cell figcaption { font-size: 12px; color: #9FB0C4; text-align: center; }
 .next { color: var(--muted); max-width: 70ch; }
 .archive { display: grid; gap: 14px; }
+.typetest { display: grid; gap: 14px; }
+.type-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.type-card { margin: 0; background: var(--sheet); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 12px; }
+.type-spec, .type-f { background: #FFFFFF; border: 1px solid var(--line); border-radius: 10px; padding: 8px; }
+.type-spec svg, .type-f svg { width: 100%; height: auto; display: block; }
+.type-spec svg { max-height: 140px; }
+.type-small { display: flex; gap: 8px; }
+.type-card figcaption { display: grid; gap: 4px; font-size: 14px; }
+.type-card figcaption span { color: var(--muted); font-size: 13px; }
+@media (max-width: 900px) { .type-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .type-grid { grid-template-columns: 1fr; } }
 .archive-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
 .archive-cell { margin: 0; background: var(--sheet); border: 1px solid var(--line); border-radius: 10px; padding: 12px 10px 8px; display: grid; gap: 6px; justify-items: center; opacity: 0.75; }
 .archive-cell svg { width: 100%; max-width: 130px; height: auto; display: block; }
@@ -569,6 +609,22 @@ p { margin: 0; }
   </section>
 
   ${shortlist.map(conceptSection).join("\n")}
+
+  <section class="typetest" aria-labelledby="h-type">
+    <p class="tag">Numeral type test</p>
+    <h2 id="h-type">Six bold, minimal faces for the “11”</h2>
+    <p class="next">Each face is set flat, with no outline or bevel. It appears as a gold specimen, on the F (Two Hands) ribbon, and at 70 px header height.</p>
+    <div class="type-grid">
+      ${TYPE_TEST.map((f, i) => `
+      <figure class="type-card">
+        <div class="type-spec">${typeSpecimen(`s${f.key}${i}`, f).replace(/ width="\d+" height="\d+"/, "")}</div>
+        <div class="type-f">${typeOnF(`f${f.key}${i}`, f).replace(/ width="\d+" height="\d+"/, "")}</div>
+        <div class="type-small"><span class="chip chip-light" style="height:70px">${typeOnF(`g${f.key}${i}`, f).replace(/ width="\d+" height="\d+"/, "")}</span><span class="chip chip-navy" style="height:70px">${typeOnF(`h${f.key}${i}`, f).replace(/ width="\d+" height="\d+"/, "")}</span></div>
+        <figcaption><strong>${i + 1} · ${f.name}</strong><span>${f.note}</span></figcaption>
+      </figure>`).join("")}
+    </div>
+    <p class="file">concepts/svg/type-test/F-11-*.svg</p>
+  </section>
 
   <section class="lineup" aria-labelledby="h-lineup">
     <p class="tag">Side by side</p>
