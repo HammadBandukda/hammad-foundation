@@ -133,7 +133,8 @@ Sources: [hammadfoundation.com](https://hammadfoundation.com/) · [About Us](htt
 |---|---|---|
 | 01 · Brief & Palette | `3033:2` | Done: brief bullets and 8 colour swatches |
 | 02 · References | `3033:3` | Done: 10 Years mark, favicon, header logo (on navy), FB post and poster, each with a caption |
-| 03 · Concepts (from Artifacts) | `3033:4` | Empty: waiting for the concept sketches |
+| 02b · Website Design Language | `3041:2` | Done (session 2): design-language notes, 7 site colours, homepage and About page screenshots (desktop and mobile), 14 project photos |
+| 03 · Concepts (from Artifacts) | `3033:4` | Empty: waiting for the concept sketches (moved down to make room for 02b) |
 | 04 · Refinement | `3033:5` | Empty |
 | 05 · Illustrator Handoff | `3033:6` | Notes only |
 
@@ -146,5 +147,7 @@ Sources: [hammadfoundation.com](https://hammadfoundation.com/) · [About Us](htt
    - Added from Hammad's ideas: **E1 Twin Trees · Canopy** (trunks with linked roots, emblem as canopy), **E2 Twin Trees · Grove** (trunk-1s with leaves rising behind the emblem) and **F Two Hands** (each 1 is a forearm and hand cupping the emblem like a globe). F reads as care first and "11" second, so it may need "11" on the ribbon.
 2. Hammad picks 1–2 directions. Import those SVGs into section 03 of the Figma board, then refine them in section 04.
 3. Export the final SVG, polish it in Illustrator, and submit before **20 Nov 2026**.
+
+**Website design language (from 02b):** bright nav green `#03B441`, button/stat green `#067530`, navy text `#020D19`, orange `#FF6D00` for small accents only, light grey `#F8F8F8` bands. Bold geometric sans headlines, letter-spaced eyebrow labels, rounded cards, circular photo crops, gold Urdu calligraphy ("جاری سفر", *the journey continues*). The site already uses an icon of **two hands holding a heart**, which supports direction F. Assets are in `reference/site/` (`photos/`, `shots/`).
 
 **Permissions:** `.claude/settings.json` (committed by Hammad) allows routine tools, so new sessions should not keep asking for permission.
