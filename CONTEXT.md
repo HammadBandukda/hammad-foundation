@@ -47,6 +47,13 @@ Files: `reference/competition-facebook-post.png` and `reference/competition-post
   - 100 families supported by Rozgar
 - **Tone:** hopeful, dignified and community-led, with an emphasis on self-reliance. It is patriotic (Pakistan) and Islamic in its giving language (Sadqa, Zakat).
 
+### 2027 goals (researched 4 Nov 2026)
+
+- **No 2027-specific goals are published** on the website, its News & Stories page, or in press coverage. The only dated goal is **"Transforming Pakistan by 2050"**. **Ask the media team** whether year 11 has a theme or targets.
+- **Chairman: Hammad Tanveer.** He frames himself as a Gen Z voice. His focus areas are women empowerment, youth empowerment, political awareness, social responsibility and **climate change**.
+- **Recent activity that hints at direction:** Gen Z beach clean-ups (28 Sep 2025, 700+ volunteers; others with 3,000–4,000), **plantation drives** (Green Initiatives), and park takeovers in Karachi (9–11 Oct 2026). A Water Dam project aims at long-term water solutions. A campaign asks for Karachi to be made the capital.
+- **Founding year clue:** the Facebook handle is `hammadfoundation2015`.
+
 ## 3. How the existing 10 Years mark works (`reference/hf-10-years-logo.png`)
 
 ![10 Years](reference/hf-10-years-logo.png)
@@ -136,6 +143,7 @@ Sources: [hammadfoundation.com](https://hammadfoundation.com/) · [About Us](htt
    - The emblem is redrawn as vector shapes in a 200×200 box (`emblem()` in the script). Each SVG has named groups (`emblem`, `icon-roti`, `icon-tools`, `icon-tap`, `icon-heart`, `one-left`, `one-right`, `ribbon`) and no rasters.
    - "Years" is still live text in Dancing Script 700 (stand-in for the 10 Years script). Convert to outlines in Illustrator.
    - Sketch-level notes: A can read as "101"; B reads "11" most clearly; C has the smallest emblem; D is the closest sibling to the 10 Years mark.
+   - Added from Hammad's ideas: **E1 Twin Trees · Canopy** (trunks with linked roots, emblem as canopy), **E2 Twin Trees · Grove** (trunk-1s with leaves rising behind the emblem) and **F Two Hands** (each 1 is a forearm and hand cupping the emblem like a globe). F reads as care first and "11" second, so it may need "11" on the ribbon.
 2. Hammad picks 1–2 directions. Import those SVGs into section 03 of the Figma board, then refine them in section 04.
 3. Export the final SVG, polish it in Illustrator, and submit before **20 Nov 2026**.
 

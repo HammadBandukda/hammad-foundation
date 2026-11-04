@@ -99,6 +99,55 @@ function one(p, x, y, h, { mirror = false, id = "one", face = null } = {}) {
 }
 const oneWidth = (h) => h * 0.5;
 
+// ---------- the "1" as a tree trunk: same flag-and-stem silhouette, grown organic ----------
+// unit box 68 × 100. The flag is a side branch; the foot flares into roots.
+const TRUNK = "M24 2H44C44 36 45 64 48 80C51 90 58 95 66 100H38C36 97 35 95 34 93C33 95 32 97 30 100H4C11 95 16 89 18 80C20 64 21 46 22 36C16 33 9 28 3 18L9 13C13 20 18 24 22 25Z";
+function trunk(p, x, y, h, { id = "trunk" } = {}) {
+  const s = h / 100;
+  return `
+  <g id="${id}" transform="translate(${x} ${y}) scale(${s})">
+    <path id="${id}-extrude" d="${TRUNK}" transform="translate(3 2)" fill="${C.goldShade}" stroke="${C.deep}" stroke-width="2.2" stroke-linejoin="round"/>
+    <path id="${id}-face" d="${TRUNK}" fill="url(#${p}-gold)" stroke="${C.deep}" stroke-width="2.2" stroke-linejoin="round"/>
+    <g id="${id}-bark" fill="none" stroke="${C.goldShade}" stroke-width="1.3" stroke-linecap="round" opacity="0.8">
+      <path d="M30 12C29 30 30 50 28 70"/>
+      <path d="M38 30C37 46 39 62 41 78"/>
+      <path d="M26 84C24 90 20 94 14 97"/>
+      <path d="M42 86C46 91 51 94 56 97"/>
+    </g>
+  </g>`;
+}
+const trunkWidth = (h) => h * 0.68;
+
+
+// ---------- a "1" as a cupped hand: forearm = stem, thumb = flag ----------
+// drawn for the left side of an emblem centred at (cx, cy) with radius r; mirror for the right.
+function hand(p, cx, cy, r, { mirror = false, id = "hand" } = {}) {
+  const pt = (deg, rad) => { const t = (deg * Math.PI) / 180; return [cx + rad * Math.cos(t), cy + rad * Math.sin(t)].map((v) => v.toFixed(1)); };
+  const ri = r + 2;
+  const [ax, ay] = pt(202, ri), [bx, by] = pt(100, ri);
+  const sR = cx - r * 0.36, sL = cx - r * 0.82, bottom = cy + r * 1.95;
+  const d = `M${ax} ${ay}A${ri} ${ri} 0 0 0 ${bx} ${by}`
+    + `C${cx - r * 0.12} ${cy + r * 1.08} ${sR} ${cy + r * 1.1} ${sR} ${cy + r * 1.18}`
+    + `V${bottom}H${sL}V${cy + r * 1.22}`
+    + `C${cx - r * 1.12} ${cy + r * 1.02} ${cx - r * 1.3} ${cy + r * 0.55} ${cx - r * 1.28} ${cy + r * 0.05}`
+    + `C${cx - r * 1.27} ${cy - r * 0.3} ${cx - r * 1.2} ${cy - r * 0.55} ${cx - r * 1.08} ${cy - r * 0.68}`
+    + `Q${cx - r * 0.98} ${cy - r * 0.76} ${ax} ${ay}Z`;
+  const m = mirror ? `translate(${2 * cx} 0) scale(-1 1)` : "";
+  const crease = `M${cx - r * 1.1} ${cy + r * 0.42}Q${cx - r * 0.95} ${cy + r * 0.62} ${cx - r * 0.72} ${cy + r * 0.86}M${cx - r * 1.02} ${cy - r * 0.2}Q${cx - r * 1.08} ${cy + r * 0.05} ${cx - r * 1.06} ${cy + r * 0.2}`;
+  return `
+  <g id="${id}" transform="${m}">
+    <path id="${id}-extrude" d="${d}" transform="translate(4 3)" fill="${C.goldShade}" stroke="${C.deep}" stroke-width="2.6" stroke-linejoin="round"/>
+    <path id="${id}-face" d="${d}" fill="url(#${p}-gold)" stroke="${C.deep}" stroke-width="2.6" stroke-linejoin="round"/>
+    <path id="${id}-creases" d="${crease}" fill="none" stroke="${C.goldShade}" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+  </g>`;
+}
+
+// almond leaf with a midrib; angle in degrees, 0 points right
+function leaf(x, y, len, angle, color) {
+  const w = len * 0.36;
+  return `<g transform="translate(${x} ${y}) rotate(${angle})"><path d="M0 0C${len * 0.3} ${-w} ${len * 0.75} ${-w} ${len} 0C${len * 0.75} ${w} ${len * 0.3} ${w} 0 0Z" fill="${color}" stroke="${C.deep}" stroke-width="1.2"/><path d="M${len * 0.08} 0H${len * 0.85}" stroke="${C.white}" stroke-width="1.2" opacity="0.7"/></g>`;
+}
+
 // ---------- the gold ribbon with "Years" ----------
 function ribbon(p, cx, cy, w, { label = "Years", lead = "" } = {}) {
   const h = w * 0.13, sag = w * 0.07, L = cx - w / 2, R = cx + w / 2;
@@ -201,6 +250,81 @@ const concepts = [
   <circle id="gold-ring" cx="${cx}" cy="${cy}" r="${eS / 2 + 13}" fill="url(#${p}-gold)" stroke="${C.deep}" stroke-width="2.5"/>
   ${emblem(p, ex, ey, eS)}
   ${ribbon(p, cx, rcy, rw, { lead })}`, "11 Years, direction D: Ribbon Wrap");
+    },
+  },
+  {
+    key: "e1",
+    file: "E1-tree-canopy.svg",
+    name: "Twin Trees · Canopy",
+    pitch: "The two 1s become tree trunks. Their roots link at the base, and the emblem is the canopy they hold up together.",
+    idea: "Planted together, growing together: hath mai hath in the roots, and the Green Initiatives and plantation drives in the trees.",
+    reads: "A single tree shape at a glance. The two trunks and their side branches still carry the “11” underneath the crown.",
+    risk: "The emblem covers the tops of the 1s, so “11” is the second read. Test it at 32 px before going further.",
+    build(p) {
+      const W = 420, H = 372, h = 190, base = 312, tw = trunkWidth(h);
+      const x1 = W / 2 - tw + 8, x2 = W / 2 - 8;
+      const eS = 176, ex = (W - eS) / 2, ey = 40;
+      return svg(p, W, H, `
+  <g id="leaves-back">
+    ${[200, 228, 256, 284, 312, 340, 8, 36, 150, 172].map((d, i) => {
+      const r = eS / 2 - 6, cx = ex + eS / 2, cy = ey + eS / 2, t = (d * Math.PI) / 180;
+      return leaf(cx + r * Math.cos(t), cy + r * Math.sin(t), i % 2 ? 40 : 48, d, i % 3 ? C.green : C.deep);
+    }).join("\n    ")}
+  </g>
+  ${trunk(p, x1, base - h, h, { id: "trunk-left" })}
+  ${trunk(p, x2, base - h, h, { id: "trunk-right" })}
+  ${emblem(p, ex, ey, eS)}
+  ${ribbon(p, W / 2, base - 6, 330)}`, "11 Years, direction E1: Twin Trees, Canopy");
+    },
+  },
+  {
+    key: "e2",
+    file: "E2-tree-grove.svg",
+    name: "Twin Trees · Grove",
+    pitch: "Two tall trunk-shaped 1s rise behind the emblem, each sprouting fresh leaves from its top, like Rising Skyline grown from the ground.",
+    idea: "Growth you plant now and shade later: “Transforming Pakistan by 2050”, one year at a time.",
+    reads: "“11” reads first, because both trunks stand clear above the emblem. The leaves make it a tree instead of a tower.",
+    risk: "Leaves and bark add detail, so the small sizes need a simplified version with fewer leaves.",
+    build(p) {
+      const W = 420, H = 384, h = 250, tw = trunkWidth(h), gap = 8;
+      const x1 = W / 2 - tw - gap / 2 + 10, x2 = W / 2 + gap / 2 - 4;
+      const top1 = 62 + h * 0.08, top2 = 62;
+      const eS = 190, ex = (W - eS) / 2, ey = 148;
+      const lx1 = x1 + tw * 0.55, lx2 = x2 + tw * 0.55;
+      return svg(p, W, H, `
+  <g id="leaves-left">
+    ${leaf(lx1 - 6, top1 + 6, 56, -150, C.green)}
+    ${leaf(lx1 - 2, top1 + 2, 58, -110, C.deep)}
+    ${leaf(lx1 + 2, top1 + 2, 54, -72, C.green)}
+    ${leaf(lx1 + 6, top1 + 8, 44, -30, C.deep)}
+  </g>
+  <g id="leaves-right">
+    ${leaf(lx2 - 6, top2 + 6, 60, -148, C.deep)}
+    ${leaf(lx2 - 2, top2 + 2, 64, -108, C.green)}
+    ${leaf(lx2 + 2, top2 + 2, 58, -70, C.deep)}
+    ${leaf(lx2 + 8, top2 + 8, 48, -28, C.green)}
+  </g>
+  ${trunk(p, x1, top1, h * 0.92, { id: "trunk-left" })}
+  ${trunk(p, x2, top2, h, { id: "trunk-right" })}
+  ${emblem(p, ex, ey, eS)}
+  ${ribbon(p, W / 2, 296, 350)}`, "11 Years, direction E2: Twin Trees, Grove");
+    },
+  },
+  {
+    key: "f",
+    file: "F-two-hands.svg",
+    name: "Two Hands",
+    pitch: "Each 1 becomes a hand and forearm. The two hands cup the emblem from below and lift it up like a globe.",
+    idea: "The foundation held up by its people: hath mai hath do, Hammad ka sath do. The emblem’s four quadrants become the world they carry.",
+    reads: "Reads as care and support first. The two upright forearms carry the “11”, and the thumbs echo the flag of each 1.",
+    risk: "“11” is the subtlest of all the directions. It may need “11” on the ribbon (as in D) to be read as a number.",
+    build(p) {
+      const W = 420, H = 372, r = 90, cx = W / 2, cy = 128;
+      return svg(p, W, H, `
+  ${hand(p, cx, cy, r, { id: "hand-left" })}
+  ${hand(p, cx, cy, r, { mirror: true, id: "hand-right" })}
+  ${emblem(p, cx - r, cy - r, r * 2)}
+  ${ribbon(p, cx, 272, 350)}`, "11 Years, direction F: Two Hands");
     },
   },
 ];
@@ -325,7 +449,7 @@ p { margin: 0; }
 .file { font-size: 12px; color: var(--muted); font-family: ui-monospace, "SF Mono", Menlo, monospace; }
 
 .lineup { display: grid; gap: 16px; }
-.lineup-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.lineup-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
 .lineup-cell { margin: 0; background: var(--navy); border-radius: 10px; padding: 14px 10px 10px; display: grid; gap: 8px; justify-items: center; }
 .lineup-cell svg, .lineup-cell img { height: 70px; width: auto; display: block; }
 .lineup-cell figcaption { font-size: 12px; color: #9FB0C4; text-align: center; }
@@ -349,8 +473,8 @@ p { margin: 0; }
   <section class="intro">
     <div class="intro-text">
       <p class="tag">Hammad Foundation · logo competition · due before 20 Nov 2026</p>
-      <h1>Four ways to say 11 <em>Years</em></h1>
-      <p class="lede">First sketches for the anniversary mark that sits beside the existing logo. Each direction keeps the emblem, the gold numerals and the “Years” ribbon so it reads as the sequel to the 10 Years mark.</p>
+      <h1>Seven ways to say 11 <em>Years</em></h1>
+      <p class="lede">First sketches for the anniversary mark that sits beside the existing logo. Every direction keeps the emblem, the gold numerals and the “Years” ribbon so it reads as the sequel to the 10 Years mark.</p>
       <ul class="rules">
         <li>Emblem unchanged</li><li>Gold and green palette</li><li>“Years” ribbon</li><li>Legible at 70 px</li>
       </ul>
