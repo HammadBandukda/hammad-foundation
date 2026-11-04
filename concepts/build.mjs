@@ -192,6 +192,46 @@ function lineGrove(p, shape) {
   ${ribbon(p, cx, 352, 330)}`;
 }
 
+
+// ---------- doorway: two 1-shaped openings cut into a deep-green tile, light beyond ----------
+function doorway(p, { detail = true } = {}) {
+  const W = 420, cx = 210, tx = 60, ty = 60, tw = 300, th = 300, tr = 44;
+  const dh = 186, s = dh / 100, dy = 118, gap = 100 * s * 0.53;
+  const x1 = cx - 99.4 * s / 1.9 * 0 - (gap + 50 * s) / 2 - 3.8 * s / 2, x2 = x1 + gap;
+  const door = (x) => `<path d="${ONE}" transform="translate(${x.toFixed(1)} ${dy}) scale(${s})"/>`;
+  const bottom = dy + dh;
+  const stem = (x) => [x + 20 * s, x + 50 * s];
+  const spill = (x) => { const [a, b] = stem(x); return `<path d="M${a} ${bottom}H${b}L${b + 26} ${ty + th}H${a - 26}Z" fill="url(#${p}-spill)"/>`; };
+  const tower = (x, w, h) => `<rect x="${x}" y="${bottom - h}" width="${w}" height="${h}"/>`;
+  const skyline = detail ? `
+    <g id="skyline" fill="${C.green}" opacity="0.55">
+      ${tower(x1 + 20 * s, 9, 34)}${tower(x1 + 20 * s + 11, 7, 52)}${tower(x1 + 20 * s + 20, 10, 26)}${tower(x1 + 20 * s + 32, 8, 62)}${tower(x1 + 20 * s + 42, 12, 38)}
+      ${tower(x2 + 20 * s, 10, 44)}${tower(x2 + 20 * s + 12, 8, 70)}${tower(x2 + 20 * s + 22, 11, 30)}${tower(x2 + 20 * s + 35, 7, 56)}${tower(x2 + 20 * s + 44, 12, 24)}
+      <path d="M${x2 + 20 * s + 2} ${bottom - 44}a9 9 0 0 1 18 0Z"/>
+    </g>` : "";
+  const person = (x) => `<g fill="${C.navy}"><circle cx="${x}" cy="${bottom + 9}" r="3.6"/><rect x="${x - 3.6}" y="${bottom + 13.5}" width="7.2" height="15" rx="3"/></g>`;
+  const people = detail ? `<g id="figures">${person((stem(x1)[0] + stem(x1)[1]) / 2)}${person((stem(x2)[0] + stem(x2)[1]) / 2)}</g>` : "";
+  return `
+  <defs>
+    <linearGradient id="${p}-wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#11693A"/><stop offset="1" stop-color="#0A4524"/></linearGradient>
+    <linearGradient id="${p}-sky" gradientUnits="userSpaceOnUse" x1="0" y1="${dy}" x2="0" y2="${bottom}">
+      <stop offset="0" stop-color="${detail ? "#E7F2EC" : C.goldHi}"/><stop offset="0.6" stop-color="${detail ? "#FBF1D0" : C.gold}"/><stop offset="1" stop-color="${detail ? C.goldHi : C.goldLo}"/>
+    </linearGradient>
+    <linearGradient id="${p}-spill" gradientUnits="userSpaceOnUse" x1="0" y1="${bottom}" x2="0" y2="${ty + th}"><stop offset="0" stop-color="${C.goldHi}" stop-opacity="0.85"/><stop offset="1" stop-color="${C.goldHi}" stop-opacity="0"/></linearGradient>
+    <clipPath id="${p}-doors">${door(x1)}${door(x2)}</clipPath>
+    <clipPath id="${p}-tile"><rect x="${tx}" y="${ty}" width="${tw}" height="${th}" rx="${tr}"/></clipPath>
+  </defs>
+  <rect id="wall" x="${tx}" y="${ty}" width="${tw}" height="${th}" rx="${tr}" fill="url(#${p}-wall)"/>
+  <g id="light-spill" clip-path="url(#${p}-tile)">${spill(x1)}${spill(x2)}</g>
+  <g id="doorways-11" clip-path="url(#${p}-doors)">
+    <rect x="${tx}" y="${dy}" width="${tw}" height="${dh}" fill="url(#${p}-sky)"/>
+    ${skyline}
+  </g>
+  ${people}
+  ${emblem(p, cx - 50, 8, 100)}
+  ${ribbon(p, cx, 344, 330)}`;
+}
+
 // almond leaf with a midrib; angle in degrees, 0 points right
 function leaf(x, y, len, angle, color) {
   const w = len * 0.36;
@@ -401,6 +441,30 @@ const concepts = [
       return svg(p, 420, 432, lineGrove(p, "circle"), "11 Years, direction G2: Line Grove, Circle");
     },
   },
+  {
+    key: "h1",
+    file: "H1-doorway-skyline.svg",
+    name: "Doorway · Skyline",
+    pitch: "Two door-shaped 1s are cut into a deep-green tile, like the master logo’s square. Through them you see the sky and a city, with light spilling out onto two small figures.",
+    idea: "Eleven years open the door to what comes next: the way through to “Transforming Pakistan by 2050”, walked by real people.",
+    reads: "The openings are the numerals, so “11” reads as light against the dark wall. No font is needed.",
+    risk: "The skyline and figures disappear below about 40 px, so H2 is the version for favicons and small use.",
+    build(p) {
+      return svg(p, 420, 420, doorway(p, { detail: true }), "11 Years, direction H1: Doorway, Skyline");
+    },
+  },
+  {
+    key: "h2",
+    file: "H2-doorway-light.svg",
+    name: "Doorway · Light",
+    pitch: "The same two doorways, with nothing but gold light coming through. The bold, minimal version.",
+    idea: "As H1, cut down to the essentials: dark wall, two bright 1s and the emblem on top.",
+    reads: "The strongest “11” at small sizes, since two solid gold shapes on dark green survive even at 16 px.",
+    risk: "With the scene removed it relies on the light alone, so the gold gradient must stay warm and clean when printed.",
+    build(p) {
+      return svg(p, 420, 420, doorway(p, { detail: false }), "11 Years, direction H2: Doorway, Light");
+    },
+  },
 ];
 
 // ---------- write standalone SVGs ----------
@@ -596,7 +660,7 @@ p { margin: 0; }
   <section class="intro">
     <div class="intro-text">
       <p class="tag">Hammad Foundation · logo competition · due before 20 Nov 2026</p>
-      <h1>Three ways to say 11 <em>Years</em></h1>
+      <h1>${["Zero", "One", "Two", "Three", "Four", "Five", "Six"][shortlist.length]} ways to say 11 <em>Years</em></h1>
       <p class="lede">The shortlist for the anniversary mark that sits beside the existing logo, picked from nine first sketches. Every direction keeps the emblem, the gold numerals and the “Years” ribbon so it reads as the sequel to the 10 Years mark.</p>
       <ul class="rules">
         <li>Emblem unchanged</li><li>Gold and green palette</li><li>“Years” ribbon</li><li>Legible at 70 px</li>
