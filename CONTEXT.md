@@ -8,6 +8,25 @@
 - They want an **"11 Years" anniversary mark** that is used alongside the existing logo.
 - **Reference:** their existing **"10 Years" logo** (see §3).
 
+### Official competition details (Facebook post + poster, ~3 Nov 2026)
+
+| | |
+|---|---|
+| **Deadline** | **Before 20 November 2026** |
+| **Prize** | PKR 25,000, paid only *if the design is selected and used* |
+| **Submit to** | media@hammadfoundation.com |
+| **Brief** | "Design a logo that tells our story, represents our mission, and leaves a lasting impact." "No limits on creativity." |
+| **Poster tagline** | "Let your creativity represent our journey!" |
+| **Hashtags** | #hammadfoundation #11yearsold #logodesign |
+
+Files: `reference/competition-facebook-post.png` and `reference/competition-poster.webp`
+
+**What the poster shows:**
+- **The master (non-anniversary) logo** is in the top-right corner. It is the quartered emblem on a **dark-green rounded square**, with **"HAMMAD"** (green) set over **"FOUNDATION"** (white) in a bold geometric sans. This is the logo that "stays".
+- **The monitor shows a naive "11" sketch.** It keeps the 10 Years layout and swaps the "1" for "11", with the emblem still acting as the "0". **It reads as "110 Years".** This is the trap to avoid (see §4), and probably a deliberate placeholder.
+- **Poster styling:** a condensed bold sans (Bebas-like) in lime green and white, gold accent bars, and a white script. The background is the deep green `#0F3D22`–`#0B2E1A` range.
+- **Their Facebook avatar** already uses a rough "11" version of the mark.
+
 ## 2. About the organisation (from hammadfoundation.com)
 
 - **Karachi-based NGO.** The 10th anniversary was marked in early 2026 ("Decade of Change"), so the 11th falls in 2027. The founding year and chairman's name are not shown on the site. **Confirm both with the client.**
@@ -55,7 +74,7 @@
 
 ## 4. The core design problem
 
-**The 10 Years mark only works because the emblem is round and can stand in for "0". "11" has no zero.** So the 11-year mark needs a new way to fit the emblem in while still looking like the 10 Years mark (gold numerals, green emblem, gold ribbon with "Years").
+**The 10 Years mark only works because the emblem is round and can stand in for "0". "11" has no zero.** The competition poster proves the point: putting "11" next to the emblem reads as **"110"**. So the 11-year mark needs a new way to fit the emblem in while still looking like the 10 Years mark (gold numerals, green emblem, gold ribbon with "Years").
 
 Directions to explore:
 
@@ -81,7 +100,8 @@ Rules:
 - [ ] Founding year (2015 or 2016?) and whether "11 Years" needs a year range, e.g. "2016–2027"
 - [ ] Vector source files of the emblem and the 10 Years mark
 - [ ] Official brand colours and font for the "Years" script
-- [ ] Competition deadline, submission format and file specs
+- [x] Competition deadline: **before 20 Nov 2026** (submit to media@hammadfoundation.com)
+- [ ] Submission format and file specs (none stated; plan to send a PDF presentation with PNG previews, and vectors on request)
 - [ ] Any tagline for year 11 (the 10th used "Decade of Change")
 
 ## Reference files
