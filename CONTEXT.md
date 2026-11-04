@@ -111,3 +111,28 @@ Rules:
 - `reference/hf-favicon.png`: the favicon, 300×300
 
 Sources: [hammadfoundation.com](https://hammadfoundation.com/) · [About Us](https://hammadfoundation.com/about-us/) · [Dawn: How Karachi gives back in Ramazan](https://dawn.com/news/1899367)
+
+## 7. Workflow & handoff (session 1 → session 2)
+
+**Tools**
+- **Artifacts:** quick SVG sketches and comparisons of concepts.
+- **Figma:** the working board. File `fmHPTOHu3ddCyy2toFmtS3` ("Quick Projects"), page **"Hammad Foundation 11th Anniversary Logo"** (`3029:2`):
+  https://www.figma.com/design/fmHPTOHu3ddCyy2toFmtS3/Quick-Projects?node-id=3029-2
+- **Adobe Illustrator:** the final logo artwork is made here. Keep all SVGs clean and layered (named groups, no raster images, text converted to outlines at the end) so they open directly in Illustrator. The Adobe connector still needs to be authorised in claude.ai → Settings → Connectors.
+
+**Figma board state**
+
+| Section | Node | Status |
+|---|---|---|
+| 01 · Brief & Palette | `3033:2` | Done: brief bullets and 8 colour swatches |
+| 02 · References | `3033:3` | Done: 10 Years mark, favicon, header logo (on navy), FB post and poster, each with a caption |
+| 03 · Concepts (from Artifacts) | `3033:4` | Empty: waiting for the concept sketches |
+| 04 · Refinement | `3033:5` | Empty |
+| 05 · Illustrator Handoff | `3033:6` | Notes only |
+
+**Next steps**
+1. Build an Artifact with SVG sketches of directions A–D (Two Pillars, Rising Skyline, Seal on the Step, Ribbon Wrap). Redraw the emblem as clean vector shapes, and show each concept at 70 px and favicon size.
+2. Hammad picks 1–2 directions. Import those SVGs into section 03 of the Figma board, then refine them in section 04.
+3. Export the final SVG, polish it in Illustrator, and submit before **20 Nov 2026**.
+
+**Permissions:** `.claude/settings.json` (committed by Hammad) allows routine tools, so new sessions should not keep asking for permission.
