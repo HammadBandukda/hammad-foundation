@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash", "Read", "Edit", "Write", "Glob", "Grep",
+      "WebFetch", "WebSearch", "Artifact", "Skill",
+      "mcp__Figma",
+      "mcp__Gmail__search_threads", "mcp__Gmail__get_thread", "mcp__Gmail__get_message",
+      "mcp__Google_Drive__search_files", "mcp__Google_Drive__read_file_content",
+      "mcp__Google_Drive__get_file_metadata",
+      "mcp__plugin_adobe-for-creativity_Adobe"
+    ]
+  }
+}
