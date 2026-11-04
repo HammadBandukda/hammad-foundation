@@ -194,14 +194,25 @@ function lineGrove(p, shape) {
 
 
 // ---------- doorway: two 1-shaped openings cut into a deep-green tile, light beyond ----------
-function doorway(p, { detail = true } = {}) {
+// door shapes in a 100-tall unit box: stem = [left, right] at the floor, w = unit width
+const DOORS = {
+  latin: { d: ONE, w: 50, stem: [20, 50] },
+  // Urdu ۱: a pen stroke, broad and slightly hooked at the top, tapering toward the floor
+  urdu: { d: "M9 2C17 0 30 0 38 3L36 10C32 40 27 72 24 100H10C12 72 14 42 16 15C11 13 6 10 4 7C3 5 5 3 9 2Z", w: 40, stem: [10, 24] },
+  // mehrab: a tall pointed Mughal arch
+  mehrab: { d: "M0 100V38C0 24 6 18 12 14C15 11 17 6 17 0C17 6 19 11 22 14C28 18 34 24 34 38V100Z", w: 34, stem: [0, 34] },
+};
+function doorway(p, { detail = true, shape = "latin", label = "Years" } = {}) {
   const W = 420, cx = 210, tx = 60, ty = 60, tw = 300, th = 300, tr = 44;
-  const dh = 186, s = dh / 100, dy = 118, gap = 100 * s * 0.53;
-  const x1 = cx - 99.4 * s / 1.9 * 0 - (gap + 50 * s) / 2 - 3.8 * s / 2, x2 = x1 + gap;
-  const door = (x) => `<path d="${ONE}" transform="translate(${x.toFixed(1)} ${dy}) scale(${s})"/>`;
+  const D = DOORS[shape];
+  const dh = 186, s = dh / 100, dy = 118;
+  const gap = shape === "latin" ? 100 * s * 0.53 : D.w * s + 26;
+  const x1 = shape === "latin" ? cx - (gap + 50 * s) / 2 - 3.8 * s / 2 : cx - (gap + D.w * s) / 2, x2 = x1 + gap;
+  const door = (x) => `<path d="${D.d}" transform="translate(${x.toFixed(1)} ${dy}) scale(${s})"/>`;
   const bottom = dy + dh;
-  const stem = (x) => [x + 20 * s, x + 50 * s];
-  const spill = (x) => { const [a, b] = stem(x); return `<path d="M${a} ${bottom}H${b}L${b + 26} ${ty + th}H${a - 26}Z" fill="url(#${p}-spill)"/>`; };
+  const stem = (x) => [x + D.stem[0] * s, x + D.stem[1] * s];
+  const flare = shape === "latin" ? 26 : 12;
+  const spill = (x) => { const [a, b] = stem(x); return `<path d="M${a} ${bottom}H${b}L${b + flare} ${ty + th}H${a - flare}Z" fill="url(#${p}-spill)"/>`; };
   const tower = (x, w, h) => `<rect x="${x}" y="${bottom - h}" width="${w}" height="${h}"/>`;
   const skyline = detail ? `
     <g id="skyline" fill="${C.green}" opacity="0.55">
@@ -229,7 +240,7 @@ function doorway(p, { detail = true } = {}) {
   </g>
   ${people}
   ${emblem(p, cx - 50, 8, 100)}
-  ${ribbon(p, cx, 344, 330)}`;
+  ${ribbon(p, cx, 344, 330, { label, urdu: label !== "Years" })}`;
 }
 
 // almond leaf with a midrib; angle in degrees, 0 points right
@@ -239,7 +250,7 @@ function leaf(x, y, len, angle, color) {
 }
 
 // ---------- the gold ribbon with "Years" ----------
-function ribbon(p, cx, cy, w, { label = "Years", lead = "" } = {}) {
+function ribbon(p, cx, cy, w, { label = "Years", lead = "", urdu = false } = {}) {
   const h = w * 0.13, sag = w * 0.07, L = cx - w / 2, R = cx + w / 2;
   const tail = w * 0.09;
   const fs = h * 0.9;
@@ -250,7 +261,7 @@ function ribbon(p, cx, cy, w, { label = "Years", lead = "" } = {}) {
     <path id="ribbon-tail-right" d="M${R - tail * 0.4} ${cy + h * 0.15}L${R + tail} ${cy + h * 0.3}L${R + tail * 0.45} ${cy + h * 0.8}L${R + tail} ${cy + h * 1.35}L${R - tail * 0.4} ${cy + h * 1.2}Z" fill="${C.goldShade}"/>
     <path id="ribbon-band" d="M${L} ${cy}Q${cx} ${cy + sag * 2} ${R} ${cy}V${cy + h}Q${cx} ${cy + h + sag * 2} ${L} ${cy + h}Z" fill="url(#${p}-ribbon)" stroke="${C.goldShade}" stroke-width="1.2"/>
     ${leadSvg}
-    <text id="ribbon-years" x="${cx + (lead ? w * 0.09 : 0)}" y="${cy + sag + h * 0.78}" text-anchor="middle" font-family="'Dancing Script', 'Brush Script MT', cursive" font-weight="700" font-size="${fs}" fill="${C.white}" stroke="${C.goldShade}" stroke-width="0.6" paint-order="stroke">${label}</text>
+    <text id="ribbon-years" x="${cx + (lead ? w * 0.09 : 0)}" y="${cy + sag + h * (urdu ? 0.6 : 0.78)}" text-anchor="middle" ${urdu ? `direction="rtl" font-family="'Noto Nastaliq Urdu', serif" font-weight="700" font-size="${fs * 0.72}"` : `font-family="'Dancing Script', 'Brush Script MT', cursive" font-weight="700" font-size="${fs}"`} fill="${C.white}" stroke="${C.goldShade}" stroke-width="0.6" paint-order="stroke">${label}</text>
   </g>`;
 }
 
@@ -465,6 +476,30 @@ const concepts = [
       return svg(p, 420, 420, doorway(p, { detail: false }), "11 Years, direction H2: Doorway, Light");
     },
   },
+  {
+    key: "h3",
+    file: "H3-doorway-urdu.svg",
+    name: "Doorway · ۱۱ Calligraphic",
+    pitch: "The openings take the shape of the Urdu numeral ۱, a pen stroke that is broad at the top and tapers to the floor. The ribbon reads سال (years) in Nastaliq.",
+    idea: "One mark that reads “11” in English and “۱۱” in Urdu. It roots the anniversary in the language of the people the foundation serves, and echoes the gold Urdu calligraphy on its website.",
+    reads: "Two bright vertical strokes read as 11 to everyone. Urdu readers also see the calligraphic ۱۱ and the word سال.",
+    risk: "The tapered strokes are thinner at the floor, so the light spill is narrower. Nastaliq on the ribbon needs a proper Urdu font when finalised.",
+    build(p) {
+      return svg(p, 420, 420, doorway(p, { detail: false, shape: "urdu", label: "سال" }), "11 Years, direction H3: Doorway, Urdu calligraphic");
+    },
+  },
+  {
+    key: "h4",
+    file: "H4-doorway-mehrab.svg",
+    name: "Doorway · Mehrab",
+    pitch: "Two tall pointed Mughal arches, like the doorways of mosques and the Mazar-e-Quaid, cut into the green tile, with سال on the ribbon.",
+    idea: "Pakistani heritage architecture as the way forward: two gateways that read as ۱۱ and 11.",
+    reads: "Instantly local and dignified. The arches still read as two 1s because they are tall, narrow and side by side.",
+    risk: "Arches lean toward a religious or monument feel. Check that it suits a civic foundation rather than reading as a mosque mark.",
+    build(p) {
+      return svg(p, 420, 420, doorway(p, { detail: false, shape: "mehrab", label: "سال" }), "11 Years, direction H4: Doorway, Mehrab");
+    },
+  },
 ];
 
 // ---------- write standalone SVGs ----------
@@ -550,7 +585,7 @@ const archived = concepts.filter((c) => ARCHIVED.has(c.key));
 const html = `<title>HF 11 Years Concepts</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Dancing+Script:wght@700&family=Montserrat:wght@900&family=Onest:wght@400;500;700;800&family=Outfit:wght@800&family=Unbounded:wght@800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Dancing+Script:wght@700&family=Montserrat:wght@900&family=Noto+Nastaliq+Urdu:wght@700&family=Onest:wght@400;500;700;800&family=Outfit:wght@800&family=Unbounded:wght@800&display=swap">
 <style>
 /* Layout: a sketchbook sheet — brief strip, then one wide row per direction, then a 70 px line-up. */
 :root {
