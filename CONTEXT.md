@@ -59,6 +59,8 @@ Files: `reference/competition-facebook-post.png` and `reference/competition-post
 - **Sources:** the site's WordPress media library (`/wp-json/wp/v2/media`) only goes back to Jan 2025, when the site was built from the Lenity theme. The Wayback Machine is blocked from the cloud session, and old social profile photos need a login. **Pre-2025 logos are still unknown.** Ask the media team, or browse the Facebook "Profile pictures" album.
 - **Constant:** the round quartered emblem. It is unchanged on every sign, plaque and file. A 2084 px PNG of it is in `reference/logo-history/2026_02_website-01.png`.
 - **Inconsistent:** the wordmark. The site alone has a thin sans, a serif (`logo-01.svg`, which is also a vector source of the 10 Years mark) and two heavy rounded faces. Signage uses bold caps. Each project sign uses its own colours (blue, dark green, white/green, lime vests).
+- **9 Years mark ("Years of Change", 2025)**, shared by Hammad on 4 Nov: a white 9 whose bowl is the emblem, with a gold band for the tail reading YEARS / OF CHANGE. The wordmark is spaced bright-green HAMMAD over heavy white FOUNDATION. **Pattern:** every anniversary turns the emblem into the round part of the number (9's bowl, 10's zero). 11 has no round digit. The image file was not saved in the session, so the 02c placeholder `3062:3956` still needs it.
+- **Background test findings:** the H tile is the most robust, but needs a keyline on deep green. G2's green ring vanishes on greens and photos. All gold fails on hi-vis lime, so vests need one-colour deep green or black. The ribbon word is unreadable below about 120 px.
 - **Implication:** the 11 Years work should come with simple usage rules: a fixed lockup with the master logo, clear space, one-colour and reversed versions, and application examples (T-shirts, hi-vis vests, caps, banners, signboards). That gives them one system instead of a new logo every time.
 
 ## 3. How the existing 10 Years mark works (`reference/hf-10-years-logo.png`)
@@ -145,7 +147,7 @@ Sources: [hammadfoundation.com](https://hammadfoundation.com/) · [About Us](htt
 | 02c · Logo History | `3054:2` | Done (session 2): every logo file in the site's media library (2025–26) plus signage and vest crops from project photos |
 | 03 · Concepts (from Artifacts) | `3033:4` | **Shortlist: E1 Twin Trees (Canopy), F Two Hands, G2 Line Grove (Circle), H1/H2 Doorway**, as editable vectors |
 | 03 · Archive | `3047:2` | A, B, C, D, E2 and G1, set aside by Hammad on 4 Nov 2026 (cards kept at 60% opacity) |
-| 04 · Refinement | `3033:5` | Empty |
+| 04 · Refinement | `3033:5` | Background test done (session 2): the seven shortlisted concepts are components (`3061:449`–`3061:467`), with a 7 × 9 grid of instances on white, grey, nav green, deep green, navy, black, hi-vis lime, royal blue and a photo, plus findings |
 | 05 · Illustrator Handoff | `3033:6` | Notes only |
 
 **Next steps**

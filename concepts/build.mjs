@@ -582,6 +582,13 @@ const ARCHIVED = new Set(["a", "b", "c", "d", "e2", "g1"]);
 const shortlist = concepts.filter((c) => !ARCHIVED.has(c.key));
 const archived = concepts.filter((c) => ARCHIVED.has(c.key));
 
+const BGS = [
+  ["White", "general use", "#FFFFFF"], ["Light grey", "website sections", "#F8F8F8"], ["Nav green", "website header", "#03B441"],
+  ["Deep green", "signboards", "#0F6030"], ["Navy", "dark banners", "#020D19"], ["Black", "T-shirts", "#111111"],
+  ["Hi-vis lime", "volunteer vests", "#CCFF00"], ["Royal blue", "Medical Complex sign", "#1F5FBF"], ["Photo", "social posts", "photo"],
+];
+const photo = readFileSync(join(here, "..", "reference", "site", "photos", "Rozgar-Program.jpg")).toString("base64");
+
 const html = `<title>HF 11 Years Concepts</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -662,6 +669,15 @@ p { margin: 0; }
 .next { color: var(--muted); max-width: 70ch; }
 .archive { display: grid; gap: 14px; }
 .typetest { display: grid; gap: 14px; }
+.bgtest { display: grid; gap: 14px; }
+.bg-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--sheet); }
+.bg-grid { border-collapse: separate; border-spacing: 8px; }
+.bg-grid th { font-size: 12px; text-align: left; font-weight: 700; vertical-align: bottom; padding: 0 2px; white-space: nowrap; }
+.bg-grid th span { display: block; font-weight: 400; color: var(--muted); font-size: 11px; }
+.bg-grid tbody th { vertical-align: middle; min-width: 150px; white-space: normal; }
+.bg-cell { width: 120px; height: 120px; border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--line); }
+.bg-cell svg { width: 104px; height: auto; display: block; }
+.bg-photo { background-size: cover; background-position: center; }
 .type-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .type-card { margin: 0; background: var(--sheet); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 12px; }
 .type-spec, .type-f { background: #FFFFFF; border: 1px solid var(--line); border-radius: 10px; padding: 8px; }
@@ -690,6 +706,7 @@ p { margin: 0; }
   .trap { grid-template-columns: 1fr; }
 }
 </style>
+<style>.bg-photo { background-image: url(data:image/jpeg;base64,${photo}); }</style>
 
 <main class="wrap">
   <section class="intro">
@@ -708,6 +725,20 @@ p { margin: 0; }
   </section>
 
   ${shortlist.map(conceptSection).join("\n")}
+
+  <section class="bgtest" aria-labelledby="h-bg">
+    <p class="tag">Execution on different backgrounds</p>
+    <h2 id="h-bg">Where it will actually live</h2>
+    <p class="next">The doorway tile (H) carries its own green, so it holds up everywhere except deep green, where it needs a keyline. G2’s green ring disappears on greens and photos, and every gold element struggles on hi-vis lime, so vests need a one-colour version.</p>
+    <div class="bg-scroll">
+      <table class="bg-grid">
+        <thead><tr><th></th>${BGS.map(([n, u]) => `<th scope="col">${n}<span>${u}</span></th>`).join("")}</tr></thead>
+        <tbody>
+        ${shortlist.map((c) => `<tr><th scope="row">${c.key.toUpperCase()} · ${c.name}</th>${BGS.map(([, , bg]) => `<td><div class="bg-cell${bg === "photo" ? " bg-photo" : ""}" style="${bg === "photo" ? "" : `background:${bg}`}">${inst(c)}</div></td>`).join("")}</tr>`).join("\n        ")}
+        </tbody>
+      </table>
+    </div>
+  </section>
 
   <section class="typetest" aria-labelledby="h-type">
     <p class="tag">Numeral type test</p>
