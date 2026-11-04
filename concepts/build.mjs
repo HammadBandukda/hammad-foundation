@@ -394,7 +394,7 @@ const concepts = [
     file: "G2-line-grove-circle.svg",
     name: "Line Grove · Circle",
     pitch: "The same continuous line, traced as a circle that echoes the emblem’s round shape before turning inward as the “11”.",
-    idea: "As G1, with the circle tying the mark to the emblem and to the 10 Years silhouette.",
+    idea: "Everything flows out from the foundation and grows back toward it, and the circle ties the mark to the emblem and to the 10 Years silhouette.",
     reads: "Feels like a sibling of the emblem, as if the emblem’s ring has unwound into two growing stems.",
     risk: "A big ring around a small emblem can look like a second, larger emblem, so the line weight needs care.",
     build(p) {
@@ -449,6 +449,10 @@ const conceptSection = (c, i) => `
     </div>
     <p class="file">concepts/svg/${c.file}</p>
   </section>`;
+
+const ARCHIVED = new Set(["a", "b", "c", "d", "e2", "g1"]);
+const shortlist = concepts.filter((c) => !ARCHIVED.has(c.key));
+const archived = concepts.filter((c) => ARCHIVED.has(c.key));
 
 const html = `<title>HF 11 Years Concepts</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -528,6 +532,11 @@ p { margin: 0; }
 .lineup-cell svg, .lineup-cell img { height: 70px; width: auto; display: block; }
 .lineup-cell figcaption { font-size: 12px; color: #9FB0C4; text-align: center; }
 .next { color: var(--muted); max-width: 70ch; }
+.archive { display: grid; gap: 14px; }
+.archive-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.archive-cell { margin: 0; background: var(--sheet); border: 1px solid var(--line); border-radius: 10px; padding: 12px 10px 8px; display: grid; gap: 6px; justify-items: center; opacity: 0.75; }
+.archive-cell svg { width: 100%; max-width: 130px; height: auto; display: block; }
+.archive-cell figcaption { font-size: 12px; color: var(--muted); text-align: center; }
 .next strong { color: var(--fg); }
 
 @media (max-width: 820px) {
@@ -547,8 +556,8 @@ p { margin: 0; }
   <section class="intro">
     <div class="intro-text">
       <p class="tag">Hammad Foundation · logo competition · due before 20 Nov 2026</p>
-      <h1>Nine ways to say 11 <em>Years</em></h1>
-      <p class="lede">First sketches for the anniversary mark that sits beside the existing logo. Every direction keeps the emblem, the gold numerals and the “Years” ribbon so it reads as the sequel to the 10 Years mark.</p>
+      <h1>Three ways to say 11 <em>Years</em></h1>
+      <p class="lede">The shortlist for the anniversary mark that sits beside the existing logo, picked from nine first sketches. Every direction keeps the emblem, the gold numerals and the “Years” ribbon so it reads as the sequel to the 10 Years mark.</p>
       <ul class="rules">
         <li>Emblem unchanged</li><li>Gold and green palette</li><li>“Years” ribbon</li><li>Legible at 70 px</li>
       </ul>
@@ -559,16 +568,25 @@ p { margin: 0; }
     </div>
   </section>
 
-  ${concepts.map(conceptSection).join("\n")}
+  ${shortlist.map(conceptSection).join("\n")}
 
   <section class="lineup" aria-labelledby="h-lineup">
     <p class="tag">Side by side</p>
     <h2 id="h-lineup">At header height, next to the 10 Years mark</h2>
     <div class="lineup-row">
       <figure class="lineup-cell"><img src="data:image/png;base64,${ref}" alt="10 Years mark at 70 px"><figcaption>10 Years (current)</figcaption></figure>
-      ${concepts.map((c) => `<figure class="lineup-cell">${inst(c)}<figcaption>${c.key.toUpperCase()} · ${c.name}</figcaption></figure>`).join("\n      ")}
+      ${shortlist.map((c) => `<figure class="lineup-cell">${inst(c)}<figcaption>${c.key.toUpperCase()} · ${c.name}</figcaption></figure>`).join("\n      ")}
     </div>
-    <p class="next"><strong>Next:</strong> pick one or two directions. They go into section 03 of the Figma board, then get refined in section 04 (horizontal header lockup, single-colour and reversed versions, favicon crop).</p>
+    <p class="next"><strong>Next:</strong> refine the shortlist in section 04 of the Figma board: horizontal header lockup, single-colour and reversed versions, favicon crop, and a test beside the master logo.</p>
+  </section>
+
+  <section class="archive" aria-labelledby="h-archive">
+    <p class="tag">Archived · 4 Nov 2026</p>
+    <h2 id="h-archive">Set aside</h2>
+    <p class="next">Explored and set aside. The SVGs stay in concepts/svg, and the Figma cards are in “03 · Archive”.</p>
+    <div class="archive-row">
+      ${archived.map((c) => `<figure class="archive-cell">${inst(c)}<figcaption>${c.key.toUpperCase()} · ${c.name}</figcaption></figure>`).join("\n      ")}
+    </div>
   </section>
 </main>
 `;
