@@ -13,6 +13,10 @@
       <stop offset="0.8" stop-color="#D2AB48"/>
       <stop offset="1" stop-color="#A4802A"/>
     </linearGradient>
+    <linearGradient id="d-line" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#279C49"/>
+      <stop offset="1" stop-color="#0F6030"/>
+    </linearGradient>
     <clipPath id="d-disc"><circle cx="100" cy="100" r="87"/></clipPath>
   </defs>
   <circle id="gold-ring" cx="210" cy="133" r="116" fill="url(#d-gold)" stroke="#0F6030" stroke-width="2.5"/>

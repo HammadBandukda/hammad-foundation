@@ -34,6 +34,10 @@ const defs = (p) => `
       <stop offset="0.8" stop-color="${C.gold}"/>
       <stop offset="1" stop-color="${C.goldLo}"/>
     </linearGradient>
+    <linearGradient id="${p}-line" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="${C.green}"/>
+      <stop offset="1" stop-color="${C.deep}"/>
+    </linearGradient>
     <clipPath id="${p}-disc"><circle cx="100" cy="100" r="87"/></clipPath>
   </defs>`;
 
@@ -140,6 +144,52 @@ function hand(p, cx, cy, r, { mirror = false, id = "hand" } = {}) {
     <path id="${id}-face" d="${d}" fill="url(#${p}-gold)" stroke="${C.deep}" stroke-width="2.6" stroke-linejoin="round"/>
     <path id="${id}-creases" d="${crease}" fill="none" stroke="${C.goldShade}" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
   </g>`;
+}
+
+
+// ---------- monoline grove: the outline's two ends turn inward and rise as the "11" ----------
+// shape: "hex" (pointy-top hexagon) or "circle". The emblem crowns the top where both lines start.
+function lineGrove(p, shape) {
+  const cx = 210, cy = 182, R = 138, sw = 20, sx = 23, stemTop = 128;
+  const xl = cx - sx, xr = cx + sx;
+  let left, right, yTurn;
+  if (shape === "hex") {
+    const v = (deg) => { const t = (deg * Math.PI) / 180; return [cx + R * Math.cos(t), cy + R * Math.sin(t)]; };
+    const [tx, ty] = v(-90), [ulx, uly] = v(210), [llx, lly] = v(150), [bx, by] = v(90);
+    yTurn = lly + ((by - lly) * (xl - llx)) / (bx - llx);
+    left = `M${tx} ${ty}L${ulx.toFixed(1)} ${uly}L${llx.toFixed(1)} ${lly}L${xl} ${yTurn.toFixed(1)}`;
+  } else {
+    const dy = Math.sqrt(R * R - sx * sx);
+    yTurn = cy + dy;
+    left = `M${cx} ${cy - R}A${R} ${R} 0 0 0 ${xl} ${yTurn.toFixed(1)}`;
+  }
+  const mirror = `transform="translate(${2 * cx} 0) scale(-1 1)"`;
+  const stem = (x) => `M${x} ${yTurn.toFixed(1)}V${stemTop}`;
+  const twig = (x0, y0, x1, y1, id) => `
+    <g id="${id}">
+      <path d="M${x0} ${y0}L${x1} ${y1}" stroke="url(#${p}-gold)" stroke-width="${sw * 0.6}" stroke-linecap="round"/>
+      <circle cx="${x1}" cy="${y1}" r="${sw * 0.5}" fill="${C.green}"/>
+    </g>`;
+  return `
+  <g id="grove-outline" fill="none" stroke="url(#${p}-line)" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">
+    <path id="outline-left" d="${left}"/>
+    <path id="outline-right" d="${left}" ${mirror}/>
+  </g>
+  <g id="grove-twigs">
+    ${twig(xl, 236, xl - 40, 210, "twig-left-low")}
+    ${twig(xl, 178, xl - 32, 156, "twig-left-high")}
+    ${twig(xr, 206, xr + 40, 180, "twig-right-low")}
+    ${twig(xr, 262, xr + 30, 242, "twig-right-base")}
+  </g>
+  <linearGradient id="${p}-stem" gradientUnits="userSpaceOnUse" x1="${xl - 12}" y1="0" x2="${xr + 12}" y2="0">
+    <stop offset="0" stop-color="${C.goldHi}"/><stop offset="0.5" stop-color="${C.gold}"/><stop offset="1" stop-color="${C.goldLo}"/>
+  </linearGradient>
+  <g id="grove-11" fill="none" stroke="url(#${p}-stem)" stroke-width="${sw}" stroke-linecap="round">
+    <path id="stem-left" d="${stem(xl)}"/>
+    <path id="stem-right" d="${stem(xr)}"/>
+  </g>
+  ${emblem(p, cx - 54, cy - R - 26, 108)}
+  ${ribbon(p, cx, 352, 330)}`;
 }
 
 // almond leaf with a midrib; angle in degrees, 0 points right
@@ -327,6 +377,30 @@ const concepts = [
   ${ribbon(p, cx, 272, 350)}`, "11 Years, direction F: Two Hands");
     },
   },
+  {
+    key: "g1",
+    file: "G1-line-grove-hexagon.svg",
+    name: "Line Grove · Hexagon",
+    pitch: "One line on each side traces a hexagon from the emblem down to the base, then turns inward and rises as a stem. The two stems are the “11”, with twigs branching off them.",
+    idea: "Everything flows out from the foundation and grows back toward it. The year-11 growth comes from the ground the foundation has built.",
+    reads: "The two gold stems sit side by side in the centre, so “11” reads clearly. The twigs turn them into saplings.",
+    risk: "The hexagon is a new shape in the brand, so it sits a little apart from the round emblem.",
+    build(p) {
+      return svg(p, 420, 432, lineGrove(p, "hex"), "11 Years, direction G1: Line Grove, Hexagon");
+    },
+  },
+  {
+    key: "g2",
+    file: "G2-line-grove-circle.svg",
+    name: "Line Grove · Circle",
+    pitch: "The same continuous line, traced as a circle that echoes the emblem’s round shape before turning inward as the “11”.",
+    idea: "As G1, with the circle tying the mark to the emblem and to the 10 Years silhouette.",
+    reads: "Feels like a sibling of the emblem, as if the emblem’s ring has unwound into two growing stems.",
+    risk: "A big ring around a small emblem can look like a second, larger emblem, so the line weight needs care.",
+    build(p) {
+      return svg(p, 420, 432, lineGrove(p, "circle"), "11 Years, direction G2: Line Grove, Circle");
+    },
+  },
 ];
 
 // ---------- write standalone SVGs ----------
@@ -473,7 +547,7 @@ p { margin: 0; }
   <section class="intro">
     <div class="intro-text">
       <p class="tag">Hammad Foundation · logo competition · due before 20 Nov 2026</p>
-      <h1>Seven ways to say 11 <em>Years</em></h1>
+      <h1>Nine ways to say 11 <em>Years</em></h1>
       <p class="lede">First sketches for the anniversary mark that sits beside the existing logo. Every direction keeps the emblem, the gold numerals and the “Years” ribbon so it reads as the sequel to the 10 Years mark.</p>
       <ul class="rules">
         <li>Emblem unchanged</li><li>Gold and green palette</li><li>“Years” ribbon</li><li>Legible at 70 px</li>
