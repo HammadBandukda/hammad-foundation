@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 312" width="420" height="312" role="img" aria-label="11 Years, direction A: Two Pillars">
+  <title>11 Years, direction A: Two Pillars</title>
+  <defs>
+    <linearGradient id="a-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6DE8F"/>
+      <stop offset="0.45" stop-color="#D2AB48"/>
+      <stop offset="1" stop-color="#A4802A"/>
+    </linearGradient>
+    <linearGradient id="a-ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#A4802A"/>
+      <stop offset="0.3" stop-color="#D2AB48"/>
+      <stop offset="0.55" stop-color="#F6DE8F"/>
+      <stop offset="0.8" stop-color="#D2AB48"/>
+      <stop offset="1" stop-color="#A4802A"/>
+    </linearGradient>
+    <clipPath id="a-disc"><circle cx="100" cy="100" r="87"/></clipPath>
+  </defs>
+  
+  <g id="one-left" transform="translate(30 20) scale(2.3)">
+    <g transform="">
+      <path id="one-left-extrude" d="M20 0H50V100H20V32L2 40V14Z" transform="translate(4 3)" fill="#7A5E1C" stroke="#0F6030" stroke-width="2.4" stroke-linejoin="round"/>
+      <path id="one-left-face" d="M20 0H50V100H20V32L2 40V14Z" fill="url(#a-gold)" stroke="#0F6030" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M23 6V96" stroke="#F6DE8F" stroke-width="1.6" opacity="0.7"/>
+    </g>
+  </g>
+  
+  <g id="one-right" transform="translate(275 20) scale(2.3)">
+    <g transform="translate(50 0) scale(-1 1)">
+      <path id="one-right-extrude" d="M20 0H50V100H20V32L2 40V14Z" transform="translate(-4 3)" fill="#7A5E1C" stroke="#0F6030" stroke-width="2.4" stroke-linejoin="round"/>
+      <path id="one-right-face" d="M20 0H50V100H20V32L2 40V14Z" fill="url(#a-gold)" stroke="#0F6030" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M23 6V96" stroke="#F6DE8F" stroke-width="1.6" opacity="0.7"/>
+    </g>
+  </g>
+  
+  <g id="emblem" transform="translate(115 36) scale(0.95)">
+    <circle id="emblem-ring" cx="100" cy="100" r="99" fill="#279C49"/>
+    <circle cx="100" cy="100" r="91" fill="#FFFFFF"/>
+    <g id="emblem-quadrants" clip-path="url(#a-disc)">
+      <rect x="100" y="0" width="100" height="100" fill="#279C49"/>
+      <rect x="0" y="100" width="100" height="100" fill="#279C49"/>
+      <path d="M100 0V200M0 100H200" stroke="#FFFFFF" stroke-width="5"/>
+    </g>
+    <g id="icon-roti" transform="rotate(-14 58 64)" stroke="#279C49" stroke-width="3.6" fill="#FFFFFF">
+      <ellipse cx="58" cy="76" rx="31" ry="12"/>
+      <ellipse cx="58" cy="68" rx="31" ry="12"/>
+      <ellipse cx="58" cy="60" rx="31" ry="12"/>
+      <g fill="#279C49" stroke="none">
+        <circle cx="44" cy="58" r="1.8"/><circle cx="54" cy="54" r="1.8"/><circle cx="66" cy="56" r="1.8"/>
+        <circle cx="50" cy="63" r="1.8"/><circle cx="62" cy="63" r="1.8"/><circle cx="74" cy="61" r="1.8"/>
+      </g>
+    </g>
+    <g id="icon-tools" stroke="#FFFFFF" stroke-linecap="round" fill="none">
+      <path d="M124 40L146 62" stroke-width="5"/>
+      <path d="M147 63L161 77" stroke-width="12"/>
+      <path d="M126 82L150 54" stroke-width="7"/>
+      <circle cx="157" cy="46" r="9.5" stroke-width="6"/>
+      <path d="M157 46L168 35" stroke="#279C49" stroke-width="7"/>
+      <circle cx="124" cy="85" r="3" fill="#279C49" stroke="none"/>
+    </g>
+    <g id="icon-tap" fill="#FFFFFF">
+      <rect x="18" y="122" width="7" height="18" rx="1.5"/>
+      <path d="M25 125H66Q82 125 82 141V150H70V142Q70 137 65 137H25Z"/>
+      <rect x="48" y="112" width="6" height="14"/>
+      <rect x="38" y="108" width="26" height="6" rx="3"/>
+      <path d="M76 157C76 157 68 167 68 172A8 8 0 0 0 84 172C84 167 76 157 76 157Z"/>
+    </g>
+    <g id="icon-heart" fill="none" stroke="#279C49" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M142 176C108 154 108 126 124 121C133 118 140 124 142 130C144 124 151 118 160 121C176 126 176 154 142 176Z" stroke-width="5"/>
+      <path d="M114 146H130L135 136L141 160L147 128L152 146H170" stroke-width="3.6"/>
+    </g>
+  </g>
+  
+  <g id="ribbon">
+    <path id="ribbon-tail-left" d="M52.24 234.63L9.400000000000002 241.26L26.23 263.36L9.400000000000002 287.67L52.24 281.04Z" fill="#7A5E1C"/>
+    <path id="ribbon-tail-right" d="M367.76 234.63L410.6 241.26L393.77 263.36L410.6 287.67L367.76 281.04Z" fill="#7A5E1C"/>
+    <path id="ribbon-band" d="M40 228Q210 275.6 380 228V272.2Q210 319.8 40 272.2Z" fill="url(#a-ribbon)" stroke="#7A5E1C" stroke-width="1.2"/>
+    
+    <text id="ribbon-years" x="210" y="286.276" text-anchor="middle" font-family="'Dancing Script', 'Brush Script MT', cursive" font-weight="700" font-size="39.78" fill="#FFFFFF" stroke="#7A5E1C" stroke-width="0.6" paint-order="stroke">Years</text>
+  </g>
+</svg>

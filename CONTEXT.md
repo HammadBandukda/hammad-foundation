@@ -131,7 +131,11 @@ Sources: [hammadfoundation.com](https://hammadfoundation.com/) · [About Us](htt
 | 05 · Illustrator Handoff | `3033:6` | Notes only |
 
 **Next steps**
-1. Build an Artifact with SVG sketches of directions A–D (Two Pillars, Rising Skyline, Seal on the Step, Ribbon Wrap). Redraw the emblem as clean vector shapes, and show each concept at 70 px and favicon size.
+1. ~~Build an Artifact with SVG sketches of directions A–D.~~ **Done (session 2):** https://claude.ai/artifact/8mCZ5ibVnwYxwJw5j4Vbpa
+   - Source: `concepts/build.mjs` (run `node concepts/build.mjs`) writes `concepts/svg/A–D-*.svg` and `concepts/index.html`.
+   - The emblem is redrawn as vector shapes in a 200×200 box (`emblem()` in the script). Each SVG has named groups (`emblem`, `icon-roti`, `icon-tools`, `icon-tap`, `icon-heart`, `one-left`, `one-right`, `ribbon`) and no rasters.
+   - "Years" is still live text in Dancing Script 700 (stand-in for the 10 Years script). Convert to outlines in Illustrator.
+   - Sketch-level notes: A can read as "101"; B reads "11" most clearly; C has the smallest emblem; D is the closest sibling to the 10 Years mark.
 2. Hammad picks 1–2 directions. Import those SVGs into section 03 of the Figma board, then refine them in section 04.
 3. Export the final SVG, polish it in Illustrator, and submit before **20 Nov 2026**.
 
