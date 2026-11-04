@@ -54,6 +54,13 @@ Files: `reference/competition-facebook-post.png` and `reference/competition-post
 - **Recent activity that hints at direction:** Gen Z beach clean-ups (28 Sep 2025, 700+ volunteers; others with 3,000–4,000), **plantation drives** (Green Initiatives), and park takeovers in Karachi (9–11 Oct 2026). A Water Dam project aims at long-term water solutions. A campaign asks for Karachi to be made the capital.
 - **Founding year clue:** the Facebook handle is `hammadfoundation2015`.
 
+### Logo history (researched 4 Nov 2026)
+
+- **Sources:** the site's WordPress media library (`/wp-json/wp/v2/media`) only goes back to Jan 2025, when the site was built from the Lenity theme. The Wayback Machine is blocked from the cloud session, and old social profile photos need a login. **Pre-2025 logos are still unknown.** Ask the media team, or browse the Facebook "Profile pictures" album.
+- **Constant:** the round quartered emblem. It is unchanged on every sign, plaque and file. A 2084 px PNG of it is in `reference/logo-history/2026_02_website-01.png`.
+- **Inconsistent:** the wordmark. The site alone has a thin sans, a serif (`logo-01.svg`, which is also a vector source of the 10 Years mark) and two heavy rounded faces. Signage uses bold caps. Each project sign uses its own colours (blue, dark green, white/green, lime vests).
+- **Implication:** the 11 Years work should come with simple usage rules: a fixed lockup with the master logo, clear space, one-colour and reversed versions, and application examples (T-shirts, hi-vis vests, caps, banners, signboards). That gives them one system instead of a new logo every time.
+
 ## 3. How the existing 10 Years mark works (`reference/hf-10-years-logo.png`)
 
 ![10 Years](reference/hf-10-years-logo.png)
@@ -100,6 +107,7 @@ Rules:
 - Primary lockup, plus a horizontal version for the website header
 - Colour, single colour (green), and reversed (white on navy `#020D19`)
 - Social media profile crop
+- **Applications (requested 4 Nov):** printables for volunteers and campaigns, such as T-shirts, hi-vis vests, caps, banners, signboards and plaques. Include one-colour and screen-print-friendly versions (flat colour, no gradients) for fabric.
 - Vector files (SVG, AI or PDF) and PNG exports
 
 ## 6. Open questions for the media team
@@ -134,6 +142,7 @@ Sources: [hammadfoundation.com](https://hammadfoundation.com/) · [About Us](htt
 | 01 · Brief & Palette | `3033:2` | Done: brief bullets and 8 colour swatches |
 | 02 · References | `3033:3` | Done: 10 Years mark, favicon, header logo (on navy), FB post and poster, each with a caption |
 | 02b · Website Design Language | `3041:2` | Done (session 2): design-language notes, 7 site colours, homepage and About page screenshots (desktop and mobile), 14 project photos |
+| 02c · Logo History | `3054:2` | Done (session 2): every logo file in the site's media library (2025–26) plus signage and vest crops from project photos |
 | 03 · Concepts (from Artifacts) | `3033:4` | **Shortlist: E1 Twin Trees (Canopy), F Two Hands, G2 Line Grove (Circle), H1/H2 Doorway**, as editable vectors |
 | 03 · Archive | `3047:2` | A, B, C, D, E2 and G1, set aside by Hammad on 4 Nov 2026 (cards kept at 60% opacity) |
 | 04 · Refinement | `3033:5` | Empty |
@@ -150,6 +159,6 @@ Sources: [hammadfoundation.com](https://hammadfoundation.com/) · [About Us](htt
    - Figma note: `use_figma` (board edits) asks for permission because of the Figma connector's own tool policy on claude.ai, not the repo settings. Set it to "Always allow" at claude.ai/customize/connectors → Figma.
 3. Export the final SVG, polish it in Illustrator, and submit before **20 Nov 2026**.
 
-**Website design language (from 02b):** bright nav green `#03B441`, button/stat green `#067530`, navy text `#020D19`, orange `#FF6D00` for small accents only, light grey `#F8F8F8` bands. Bold geometric sans headlines, letter-spaced eyebrow labels, rounded cards, circular photo crops, gold Urdu calligraphy ("جاری سفر", *the journey continues*). The site already uses an icon of **two hands holding a heart**, which supports direction F. Assets are in `reference/site/` (`photos/`, `shots/`).
+**Website design language (from 02b):** bright nav green `#03B441`, button/stat green `#067530`, navy text `#020D19`, orange `#FF6D00` for small accents only, light grey `#F8F8F8` bands. Bold geometric sans headlines, letter-spaced eyebrow labels, rounded cards, circular photo crops, gold Urdu calligraphy ("جاری سفر", *the journey continues*). **Correction:** the orange two-hands-and-heart icon and orange accents come from **Lenity**, the WordPress charity theme the site is built on. They are not Hammad Foundation brand assets. Assets are in `reference/site/` (`photos/`, `shots/`).
 
 **Permissions:** `.claude/settings.json` (committed by Hammad) allows routine tools, so new sessions should not keep asking for permission.
