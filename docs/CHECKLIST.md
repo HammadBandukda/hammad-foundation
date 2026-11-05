@@ -42,7 +42,7 @@ Built from their website, signage, photos and social channels. **P1** must be in
 - [ ] Social avatar crop
 - [ ] One-colour: deep green, black, white
 - [ ] Reversed (on navy `#020D19` and on deep green)
-- [ ] Urdu version (if kept)
+- [ ] **Urdu version (required):** ۱۱ سال, حماد فاؤنڈیشن, plus Urdu lockup with the master logo
 - [ ] Lockup with the master logo
 - [ ] Colour specs: HEX, RGB, CMYK, Pantone (greens, gold, flat gold)
 - [ ] Clear-space and minimum-size rules (print mm, screen px)

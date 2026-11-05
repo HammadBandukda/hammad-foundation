@@ -48,7 +48,7 @@ Sources: [DesignRush](https://www.designrush.com/best-designs/logo/trends/how-to
 5. Concept story: one sentence and one image
 6. The mark: large, on white
 7. Construction and proportions
-8. Bilingual reading: 11 / ۱۱ (if kept)
+8. English and Urdu versions: 11 Years / ۱۱ سال
 9. Colour: specs for print and screen
 10. Variations: horizontal, stacked, icon, one-colour, reversed
 11. Lockup with the master logo

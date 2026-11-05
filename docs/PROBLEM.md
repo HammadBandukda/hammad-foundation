@@ -50,7 +50,7 @@ These are exactly where a volunteer organisation appears most: clean-ups with 70
 ### P4 · The brand-architecture problem
 They run 12+ programmes under four pillars, and each programme sign is designed from scratch (a blue Medical Complex, a green Skill Valley, a white water plaque). There is no shared template that links a programme back to the parent.
 
-### P5 · The language gap (secondary)
+### P5 · The language gap (required: an Urdu version is a deliverable)
 The audience is largely Urdu-speaking, yet every mark is English-only. The site's warmest moments (جاری سفر) are in Urdu. Urdu ۱۱ is two vertical strokes, so one mark can read in both scripts.
 
 ---
@@ -77,7 +77,7 @@ Score each concept 0–2: 0 fails, 1 partly, 2 fully. **Must** criteria need a 2
 | C8 | Lockup with the master logo is clean (horizontal and stacked) | P2 | Should |
 | C9 | Its parts can extend to pillar icons and programme lockups | P4 | Should |
 | C10 | Tells a story tied to the mission (dignity, growth, 2050) | P1 | Should |
-| C11 | Reads in Urdu as well (۱۱ / سال) | P5 | Could |
+| C11 | Has an Urdu version (۱۱ / سال / حماد فاؤنڈیشن), required by Hammad on 5 Nov | P5 | Must |
 | C12 | Has a motion idea (draw-on, doors opening) | P2 | Could |
 
 ### Score sheet
