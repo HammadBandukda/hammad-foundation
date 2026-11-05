@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 400" width="460" height="400" role="img" aria-label="Sketch S1 variant: emblem kept clear">
+  <title>Sketch S1 variant: emblem kept clear</title>
+  <defs>
+    <linearGradient id="s1b-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6DE8F"/>
+      <stop offset="0.45" stop-color="#D2AB48"/>
+      <stop offset="1" stop-color="#A4802A"/>
+    </linearGradient>
+    <linearGradient id="s1b-ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#A4802A"/>
+      <stop offset="0.3" stop-color="#D2AB48"/>
+      <stop offset="0.55" stop-color="#F6DE8F"/>
+      <stop offset="0.8" stop-color="#D2AB48"/>
+      <stop offset="1" stop-color="#A4802A"/>
+    </linearGradient>
+    <linearGradient id="s1b-line" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#279C49"/>
+      <stop offset="1" stop-color="#0F6030"/>
+    </linearGradient>
+    <clipPath id="s1b-disc"><circle cx="100" cy="100" r="87"/></clipPath>
+  </defs>
+  
+  <g id="emblem" transform="translate(20 40) scale(1.25)">
+    <circle id="emblem-ring" cx="100" cy="100" r="99" fill="#279C49"/>
+    <circle cx="100" cy="100" r="91" fill="#FFFFFF"/>
+    <g id="emblem-quadrants" clip-path="url(#s1b-disc)">
+      <rect x="100" y="0" width="100" height="100" fill="#279C49"/>
+      <rect x="0" y="100" width="100" height="100" fill="#279C49"/>
+      <path d="M100 0V200M0 100H200" stroke="#FFFFFF" stroke-width="5"/>
+    </g>
+    <g id="icon-roti" transform="rotate(-14 58 64)" stroke="#279C49" stroke-width="3.6" fill="#FFFFFF">
+      <ellipse cx="58" cy="76" rx="31" ry="12"/>
+      <ellipse cx="58" cy="68" rx="31" ry="12"/>
+      <ellipse cx="58" cy="60" rx="31" ry="12"/>
+      <g fill="#279C49" stroke="none">
+        <circle cx="44" cy="58" r="1.8"/><circle cx="54" cy="54" r="1.8"/><circle cx="66" cy="56" r="1.8"/>
+        <circle cx="50" cy="63" r="1.8"/><circle cx="62" cy="63" r="1.8"/><circle cx="74" cy="61" r="1.8"/>
+      </g>
+    </g>
+    <g id="icon-tools" stroke="#FFFFFF" stroke-linecap="round" fill="none">
+      <path d="M124 40L146 62" stroke-width="5"/>
+      <path d="M147 63L161 77" stroke-width="12"/>
+      <path d="M126 82L150 54" stroke-width="7"/>
+      <circle cx="157" cy="46" r="9.5" stroke-width="6"/>
+      <path d="M157 46L168 35" stroke="#279C49" stroke-width="7"/>
+      <circle cx="124" cy="85" r="3" fill="#279C49" stroke="none"/>
+    </g>
+    <g id="icon-tap" fill="#FFFFFF">
+      <rect x="18" y="122" width="7" height="18" rx="1.5"/>
+      <path d="M25 125H66Q82 125 82 141V150H70V142Q70 137 65 137H25Z"/>
+      <rect x="48" y="112" width="6" height="14"/>
+      <rect x="38" y="108" width="26" height="6" rx="3"/>
+      <path d="M76 157C76 157 68 167 68 172A8 8 0 0 0 84 172C84 167 76 157 76 157Z"/>
+    </g>
+    <g id="icon-heart" fill="none" stroke="#279C49" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M142 176C108 154 108 126 124 121C133 118 140 124 142 130C144 124 151 118 160 121C176 126 176 154 142 176Z" stroke-width="5"/>
+      <path d="M114 146H130L135 136L141 160L147 128L152 146H170" stroke-width="3.6"/>
+    </g>
+  </g>
+  <g id="one-left" transform="translate(262 120) scale(1.1666666666666667)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 34L30 6L18 118Q16 140 44 140" stroke="#0F6030" stroke-width="30"/>
+    <path d="M6 34L30 6L18 118Q16 140 44 140" stroke="url(#s1b-gold)" stroke-width="20"/>
+  </g>
+  <g id="one-right" transform="translate(328 120) scale(1.1666666666666667)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 34L30 6L18 118Q16 140 44 140" stroke="#0F6030" stroke-width="30"/>
+    <path d="M6 34L30 6L18 118Q16 140 44 140" stroke="url(#s1b-gold)" stroke-width="20"/>
+  </g>
+  <g id="years-vertical" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="800" font-size="28" fill="#0F6030" text-anchor="middle"><text x="428" y="150">Y</text><text x="428" y="179.4">E</text><text x="428" y="208.8">A</text><text x="428" y="238.2">R</text><text x="428" y="267.6">S</text></g>
+  <g id="plinth">
+    <path d="M30 320H430L440 330H20Z" fill="#1E7A43"/>
+    <rect x="20" y="330" width="420" height="40" fill="#0F6030"/>
+    <text x="230" y="357" text-anchor="middle" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="800" font-size="18" letter-spacing="2" fill="#FFFFFF">SERVING THE COUNTRY</text>
+  </g>
+</svg>

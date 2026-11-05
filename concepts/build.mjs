@@ -243,6 +243,45 @@ function doorway(p, { detail = true, shape = "latin", label = "Years" } = {}) {
   ${ribbon(p, cx, 344, 330, { label, urdu: label !== "Years" })}`;
 }
 
+
+// ---------- Hammad's sketches (5 Nov), digitised ----------
+const MONT = "'Montserrat', 'Arial Black', sans-serif";
+// a bold slanted 1 with a flag and a foot that hooks forward (sketch S1), drawn as an outlined stroke
+function hookOne(p, x, y, h, id) {
+  const s = h / 150;
+  const d = "M6 34L30 6L18 118Q16 140 44 140";
+  return `<g id="${id}" transform="translate(${x} ${y}) scale(${s})" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="${d}" stroke="${C.deep}" stroke-width="30"/>
+    <path d="${d}" stroke="url(#${p}-gold)" stroke-width="20"/>
+  </g>`;
+}
+function plinth(p, x, y, w, label) {
+  return `<g id="plinth">
+    <path d="M${x + 10} ${y}H${x + w - 10}L${x + w} ${y + 10}H${x}Z" fill="#1E7A43"/>
+    <rect x="${x}" y="${y + 10}" width="${w}" height="40" fill="${C.deep}"/>
+    <text x="${x + w / 2}" y="${y + 37}" text-anchor="middle" font-family="${MONT}" font-weight="800" font-size="18" letter-spacing="2" fill="${C.white}">${label}</text>
+  </g>`;
+}
+function verticalWord(x, y, word, size, color) {
+  return `<g id="years-vertical" font-family="${MONT}" font-weight="800" font-size="${size}" fill="${color}" text-anchor="middle">${[...word].map((ch, i) => `<text x="${x}" y="${y + i * size * 1.05}">${ch}</text>`).join("")}</g>`;
+}
+// chunky slab 11 joined by a base (sketch S2)
+function slab11(p, x, y, h) {
+  const s = h / 100;
+  const d = "M8 18L22 4H40V78H58V18L72 4H90V78H100V100H0V78H8Z";
+  return `<g id="slab-11" transform="translate(${x} ${y}) scale(${s})">
+    <path d="${d}" transform="translate(3 3)" fill="${C.goldShade}"/>
+    <path d="${d}" fill="url(#${p}-gold)" stroke="${C.deep}" stroke-width="2.4" stroke-linejoin="round"/>
+  </g>`;
+}
+function stackedName(x, y, withYears = true) {
+  return `<g id="wordmark-stack" font-family="${MONT}" font-weight="800">
+    ${withYears ? `<text x="${x}" y="${y}" font-size="40" fill="${C.deep}" letter-spacing="1">YEARS</text><text x="${x + 2}" y="${y + 30}" font-size="20" fill="${C.goldLo}" letter-spacing="4">OF</text>` : ""}
+    <text x="${x}" y="${y + (withYears ? 68 : 30)}" font-size="34" fill="${C.green}" letter-spacing="1">HAMMAD</text>
+    <text x="${x}" y="${y + (withYears ? 104 : 66)}" font-size="34" fill="${C.deep}" letter-spacing="1">FOUNDATION</text>
+  </g>`;
+}
+
 // almond leaf with a midrib; angle in degrees, 0 points right
 function leaf(x, y, len, angle, color) {
   const w = len * 0.36;
@@ -500,6 +539,93 @@ const concepts = [
       return svg(p, 420, 420, doorway(p, { detail: false, shape: "mehrab", label: "سال" }), "11 Years, direction H4: Doorway, Mehrab");
     },
   },
+  {
+    key: "s1a",
+    sketch: true,
+    file: "S1a-sketch-emblem-11-plinth.svg",
+    name: "Sketch S1 · As drawn",
+    pitch: "Hammad's sketch: the emblem large, a bold slanted 11 with hooked feet overlapping its lower right, “YEARS” running vertically, all standing on a plinth that reads SERVING THE COUNTRY.",
+    idea: "Eleven years of serving the country, standing on solid ground. A new line in the series after “Years of Change” and “Decade of Change”.",
+    reads: "The 11 reads first because it sits in front. The plinth gives the mark weight and a place for the tagline.",
+    risk: "The 11 covers part of the health quadrant, which breaks “emblem unchanged”. The vertical YEARS is hard to read at small sizes.",
+    build(p) {
+      return svg(p, 440, 400, `
+  ${emblem(p, 30, 30, 270)}
+  ${hookOne(p, 205, 150, 150, "one-left")}
+  ${hookOne(p, 262, 150, 150, "one-right")}
+  ${verticalWord(352, 178, "YEARS", 26, C.deep)}
+  ${plinth(p, 30, 320, 380, "SERVING THE COUNTRY")}`, "Sketch S1 as drawn: emblem, 11, plinth");
+    },
+  },
+  {
+    key: "s1b",
+    sketch: true,
+    file: "S1b-sketch-emblem-11-plinth-clear.svg",
+    name: "Sketch S1 · Emblem kept clear",
+    pitch: "The same composition, with the 11 pulled out so it only touches the emblem's ring. No quadrant is covered.",
+    idea: "As S1: eleven years of serving the country, standing on solid ground.",
+    reads: "The emblem stays whole. The 11 leans on the ring like a companion rather than a stamp.",
+    risk: "Emblem then 11 side by side could read as “011”. Test it with someone who hasn't seen the brief.",
+    build(p) {
+      return svg(p, 460, 400, `
+  ${emblem(p, 20, 40, 250)}
+  ${hookOne(p, 262, 120, 175, "one-left")}
+  ${hookOne(p, 328, 120, 175, "one-right")}
+  ${verticalWord(428, 150, "YEARS", 28, C.deep)}
+  ${plinth(p, 20, 320, 420, "SERVING THE COUNTRY")}`, "Sketch S1 variant: emblem kept clear");
+    },
+  },
+  {
+    key: "s1c",
+    sketch: true,
+    file: "S1c-sketch-held-up-by-eleven.svg",
+    name: "Sketch S1 · Held up by eleven",
+    pitch: "An interpretation of the drawing at the bottom of the S1 page: the emblem rests on two 1s like a tabletop on two legs, above the SERVING THE COUNTRY plinth.",
+    idea: "Eleven years holding up the foundation's four promises.",
+    reads: "The two 1s are separate and upright, so “11” reads without touching the emblem, and the emblem is shown whole.",
+    risk: "It can look like a trophy or a lollipop. The 1s need weight and the right gap so they read as numerals, not posts.",
+    build(p) {
+      return svg(p, 440, 420, `
+  ${emblem(p, 120, 14, 196)}
+  ${hookOne(p, 146, 214, 122, "one-left")}
+  ${hookOne(p, 236, 214, 122, "one-right")}
+  ${verticalWord(392, 200, "YEARS", 24, C.deep)}
+  ${plinth(p, 40, 340, 360, "SERVING THE COUNTRY")}`, "Sketch S1 variant: emblem held up by two 1s");
+    },
+  },
+  {
+    key: "s2a",
+    sketch: true,
+    file: "S2a-sketch-horizontal-lockup.svg",
+    name: "Sketch S2 · Horizontal lockup",
+    pitch: "Hammad's sketch: the emblem, then a chunky slab 11 joined by a base, then YEARS OF HAMMAD FOUNDATION stacked beside it.",
+    idea: "A plain statement for headers and signboards: “11 Years of Hammad Foundation”.",
+    reads: "Practical and wide, so it fits website headers, banners and sign fascias.",
+    risk: "Emblem then 11 can read as “011”, and the joined base can make the 11 read as a “U”. The 11 and the wordmark compete for attention, and the stacked text is small in a favicon.",
+    build(p) {
+      return svg(p, 700, 260, `
+  ${emblem(p, 20, 30, 200)}
+  ${slab11(p, 240, 55, 150)}
+  ${stackedName(405, 92)}`, "Sketch S2 as drawn: horizontal lockup");
+    },
+  },
+  {
+    key: "s2b",
+    sketch: true,
+    file: "S2b-sketch-horizontal-lockup-divider.svg",
+    name: "Sketch S2 · With divider",
+    pitch: "The same lockup with a thin gold divider between the emblem and the 11, the standard anniversary-lockup move (Detroit Mercy 150, Worcester 150).",
+    idea: "As S2, but the emblem reads as the logo and the 11 as the anniversary.",
+    reads: "The divider stops “011” and makes the structure clear: logo | anniversary | name.",
+    risk: "Closer to a template lockup and less of a single mark. Strong for signage, weaker as a standalone icon.",
+    build(p) {
+      return svg(p, 740, 260, `
+  ${emblem(p, 20, 30, 200)}
+  <rect id="divider" x="243" y="40" width="4" height="180" fill="${C.gold}"/>
+  ${slab11(p, 272, 55, 150)}
+  ${stackedName(445, 92)}`, "Sketch S2 variant: lockup with divider");
+    },
+  },
 ];
 
 // ---------- write standalone SVGs ----------
@@ -592,7 +718,7 @@ const photo = readFileSync(join(here, "..", "reference", "site", "photos", "Rozg
 const html = `<title>HF 11 Years Concepts</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Dancing+Script:wght@700&family=Montserrat:wght@900&family=Noto+Nastaliq+Urdu:wght@700&family=Onest:wght@400;500;700;800&family=Outfit:wght@800&family=Unbounded:wght@800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Dancing+Script:wght@700&family=Montserrat:wght@800;900&family=Noto+Nastaliq+Urdu:wght@700&family=Onest:wght@400;500;700;800&family=Outfit:wght@800&family=Unbounded:wght@800&display=swap">
 <style>
 /* Layout: a sketchbook sheet — brief strip, then one wide row per direction, then a 70 px line-up. */
 :root {
@@ -712,7 +838,7 @@ p { margin: 0; }
   <section class="intro">
     <div class="intro-text">
       <p class="tag">Hammad Foundation · logo competition · due before 20 Nov 2026</p>
-      <h1>${["Zero", "One", "Two", "Three", "Four", "Five", "Six"][shortlist.length]} ways to say 11 <em>Years</em></h1>
+      <h1>${shortlist.length} ways to say 11 <em>Years</em></h1>
       <p class="lede">The shortlist for the anniversary mark that sits beside the existing logo, picked from nine first sketches. Every direction keeps the emblem, the gold numerals and the “Years” ribbon so it reads as the sequel to the 10 Years mark.</p>
       <ul class="rules">
         <li>Emblem unchanged</li><li>Gold and green palette</li><li>“Years” ribbon</li><li>Legible at 70 px</li>

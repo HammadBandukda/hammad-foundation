@@ -92,7 +92,11 @@ Write scores as 12 digits in C1–C12 order, e.g. `222212221110`.
 | H2 Doorway, Light | | | |
 | H3 Doorway, ۱۱ | | | |
 | H4 Doorway, Mehrab | | | |
-| Hammad's sketches | | | |
+| S1a Sketch: as drawn | | | |
+| S1b Sketch: emblem kept clear | | | |
+| S1c Sketch: held up by eleven | | | |
+| S2a Sketch: horizontal lockup | | | |
+| S2b Sketch: with divider | | | |
 
 Fill this in during Step 4, after the sketches are in.
 
