@@ -145,6 +145,8 @@ Sources: [hammadfoundation.com](https://hammadfoundation.com/) · [About Us](htt
 | 02 · References | `3033:3` | Done: 10 Years mark, favicon, header logo (on navy), FB post and poster, each with a caption |
 | 02b · Website Design Language | `3041:2` | Done (session 2): design-language notes, 7 site colours, homepage and About page screenshots (desktop and mobile), 14 project photos |
 | 02c · Logo History | `3054:2` | Done (session 2): every logo file in the site's media library (2025–26) plus signage and vest crops from project photos |
+| 06 · Inspiration (slides) | `3073:3953` | 10 slides: three anniversary approaches (15 figures from the JECS paper, incl. Vignelli Abdi İbrahim 100), Pentagram MTA 40, Bread 50th, Worcester 150, SDG + Rotary (brand architecture), AIAA volunteer rules, HF's own series |
+| 07 · Presentation template | `3075:3953` | 21 slides (00 plan + 01–20 deck) built from the `Deck / Placeholder` and `Deck / Note` components. Each slide lists its placeholders, to-dos and things to gather |
 | 03 · Concepts (from Artifacts) | `3033:4` | **Shortlist: E1 Twin Trees (Canopy), F Two Hands, G2 Line Grove (Circle), H1/H2 Doorway**, as editable vectors |
 | 03 · Archive | `3047:2` | A, B, C, D, E2 and G1, set aside by Hammad on 4 Nov 2026 (cards kept at 60% opacity) |
 | 04 · Refinement | `3033:5` | Background test done (session 2): the seven shortlisted concepts are components (`3061:449`–`3061:467`), with a 7 × 9 grid of instances on white, grey, nav green, deep green, navy, black, hi-vis lime, royal blue and a photo, plus findings |

@@ -97,6 +97,7 @@ Deadline: submit **before 20 Nov 2026**. The target is 18 Nov, which leaves a da
 - **Gate:** a printer or volunteer could apply the mark correctly from these pages alone.
 
 ## 9 · Presentation PDF ⬜
+- **Template ready:** Figma section 07 (`3075:3953`), 21 slides with placeholders. Replace the placeholders as each step finishes.
 - Use the outline in `docs/RESEARCH.md` §3.
 - **Gate:** it reads as a story without any voice-over, and is under 15 MB.
 
