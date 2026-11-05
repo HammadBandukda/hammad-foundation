@@ -8,7 +8,7 @@ Deadline: submit **before 20 Nov 2026**. The target is 18 Nov, which leaves a da
 |---|---|---|
 | 0 | Brief and discovery | ✅ Done |
 | 1 | Research | 🟡 Mostly done |
-| 2 | Strategy: concept criteria | ⬜ Next |
+| 2 | Strategy: concept criteria | 🟡 Drafted in `docs/PROBLEM.md`, awaiting approval |
 | 3 | Ideation | 🟡 In progress (Hammad sketching) |
 | 4 | Selection | ⬜ |
 | 5 | Refinement | ⬜ |
@@ -40,8 +40,8 @@ Deadline: submit **before 20 Nov 2026**. The target is 18 Nov, which leaves a da
 - **Gate:** the open items are answered, or a decision is made to proceed without them (deadline 6 Nov).
 - **Capture:** the research board (02, 02b, 02c), one screenshot per section.
 
-## 2 · Strategy: concept criteria ⬜
-Write down what the mark must do, then score every concept against it.
+## 2 · Strategy: concept criteria 🟡
+**Drafted in `docs/PROBLEM.md`:** audit, problems P1–P5, problem statement, criteria C1–C12, score sheet, and the system-thinking page. The list below is the original summary.
 - **Must:**
   1. Reads as **11**, never 110 or 101.
   2. Keeps the emblem unchanged (same quadrants, icons and greens).
