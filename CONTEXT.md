@@ -150,6 +150,8 @@ Sources: [hammadfoundation.com](https://hammadfoundation.com/) · [About Us](htt
 | 04 · Refinement | `3033:5` | Background test done (session 2): the seven shortlisted concepts are components (`3061:449`–`3061:467`), with a 7 × 9 grid of instances on white, grey, nav green, deep green, navy, black, hi-vis lime, royal blue and a photo, plus findings |
 | 05 · Illustrator Handoff | `3033:6` | Notes only |
 
+**Process:** see `docs/PROCESS.md` (steps and gates), `docs/CHECKLIST.md` (where the logo is used, and deliverables), and `docs/RESEARCH.md` (references, PDF outline, portfolio plan).
+
 **Next steps**
 1. ~~Build an Artifact with SVG sketches of directions A–D.~~ **Done (session 2):** https://claude.ai/artifact/8mCZ5ibVnwYxwJw5j4Vbpa
    - Source: `concepts/build.mjs` (run `node concepts/build.mjs`) writes `concepts/svg/A–D-*.svg` and `concepts/index.html`.
