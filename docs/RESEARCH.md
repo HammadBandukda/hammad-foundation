@@ -11,6 +11,12 @@ Gathered 5 Nov 2026. Most sources are studio blogs and published brand guides, s
 
 ## 2 · Anniversary marks: lessons
 - **Precedent for their approach:** Massimo Vignelli's 100th-anniversary mark for Abdi İbrahim drew the "0" as the company's emblem. A published study praises it because the anniversary feels part of the brand, and contrasts it with Anadolu University's 50th, where the number was simply placed under the logo ([JECS paper](https://jecs.pl/index.php/jecs/article/view/645/505)). Use this in the presentation to show that the 11 Years mark continues a respected tradition.
+- **Pentagram, MTA Arts & Design 40th** ([link](https://www.pentagram.com/work/mta-arts-design-40th), Giorgia Lupi), shared by Hammad. What we can borrow:
+  - **Extend the existing mark's geometry.** The "40" is a monoline numeral built from the rhythm of the logo's two circles, and the 0 becomes a third circle holding "Since 1985". Our version: keep the 11 as clean as the doorways, and test a small "Since 2015/16" line inside or under the mark once the founding year is confirmed.
+  - **One anniversary accent colour.** They added a violet for the year. Ours could be gold, used as a single flat colour plus one gradient for digital.
+  - **A campaign line with a two-beat rhythm.** "Art Everywhere for Everyone" echoes the two circles and the 4 and 0. Our 11 is two beats too, so a two-part Urdu or English line fits, e.g. *hath mai hath* / *Decade → Journey*. Confirm with the media team.
+  - **Motion as part of the identity.** The 40 draws on in one stroke and the 0 closes around the date. Ours could have the doorways open and light pour through, for social posts and the website.
+  - **Page structure:** title and one-line descriptor, then story copy (background, construction, colour, line, motion, applications), then credits. Short, confident, mostly visual.
 - **Lockups:** most guides define the anniversary mark plus the master logo in horizontal and stacked forms, separated by a divider, with the master logo left unchanged.
   - [Detroit Mercy 150 guide](https://www.udmercy.edu/150/files/DM-150-Brand-Guidelines-2026-FINAL.pdf)
   - [MCC 20th anniversary guide](https://www.mcc.gov/resources/doc/20th-anniv-branding-guidelines/)
