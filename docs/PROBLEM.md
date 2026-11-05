@@ -81,16 +81,18 @@ Score each concept 0–2: 0 fails, 1 partly, 2 fully. **Must** criteria need a 2
 | C12 | Has a motion idea (draw-on, doors opening) | P2 | Could |
 
 ### Score sheet
-| Concept | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 | C10 | C11 | C12 | Total | In? |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| E1 Twin Trees | | | | | | | | | | | | | | |
-| F Two Hands | | | | | | | | | | | | | | |
-| G2 Line Grove | | | | | | | | | | | | | | |
-| H1 Doorway, Skyline | | | | | | | | | | | | | | |
-| H2 Doorway, Light | | | | | | | | | | | | | | |
-| H3 Doorway, ۱۱ | | | | | | | | | | | | | | |
-| H4 Doorway, Mehrab | | | | | | | | | | | | | | |
-| *Hammad's sketches…* | | | | | | | | | | | | | | |
+Write scores as 12 digits in C1–C12 order, e.g. `222212221110`.
+
+| Concept | Scores C1–C12 | Total | Passes all Musts? |
+|---|---|---|---|
+| E1 Twin Trees | | | |
+| F Two Hands | | | |
+| G2 Line Grove | | | |
+| H1 Doorway, Skyline | | | |
+| H2 Doorway, Light | | | |
+| H3 Doorway, ۱۱ | | | |
+| H4 Doorway, Mehrab | | | |
+| Hammad's sketches | | | |
 
 Fill this in during Step 4, after the sketches are in.
 
