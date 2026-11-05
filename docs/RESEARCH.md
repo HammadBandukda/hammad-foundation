@@ -16,6 +16,7 @@ Gathered 5 Nov 2026. Most sources are studio blogs and published brand guides, s
   - **One anniversary accent colour.** They added a violet for the year. Ours could be gold, used as a single flat colour plus one gradient for digital.
   - **A campaign line with a two-beat rhythm.** "Art Everywhere for Everyone" echoes the two circles and the 4 and 0. Our 11 is two beats too, so a two-part Urdu or English line fits, e.g. *hath mai hath* / *Decade → Journey*. Confirm with the media team.
   - **Motion as part of the identity.** The 40 draws on in one stroke and the 0 closes around the date. Ours could have the doorways open and light pour through, for social posts and the website.
+  - **Applications shown (screenshots in `reference/inspiration/pentagram-mta-40/`):** a hero motion film; a subway digital poster with the campaign line and the lockup small in the footer; a tote with a one-colour white lockup on violet; an event screen; a poster triptych; a sticker sheet in violet and white. The lockup is always *the master logo plus the anniversary mark together*.
   - **Page structure:** title and one-line descriptor, then story copy (background, construction, colour, line, motion, applications), then credits. Short, confident, mostly visual.
 - **Lockups:** most guides define the anniversary mark plus the master logo in horizontal and stacked forms, separated by a divider, with the master logo left unchanged.
   - [Detroit Mercy 150 guide](https://www.udmercy.edu/150/files/DM-150-Brand-Guidelines-2026-FINAL.pdf)
