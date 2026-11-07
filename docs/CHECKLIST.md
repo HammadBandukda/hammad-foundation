@@ -49,6 +49,7 @@ Built from their website, signage, photos and social channels. **P1** must be in
 - [ ] Misuse examples (stretch, recolour, effects, crowding, emblem edits)
 - [ ] Usage window: 2027 only
 - [ ] Files: AI, PDF, EPS, SVG (outlined); PNG transparent @1x/@2x/@4x; JPG previews
+- [ ] Logo animation (final mark only): MP4 1:1 + 16:9, 9:16 story cut, transparent WebM/GIF, static end frame
 - [ ] Presentation PDF (16:9, under 15 MB)
 - [ ] Guidelines pages (inside the PDF or standalone)
 

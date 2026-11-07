@@ -13,6 +13,7 @@ Deadline: submit **before 20 Nov 2026**. The target is 18 Nov, which leaves a da
 | 4 | Selection | ⬜ |
 | 5 | Refinement | ⬜ |
 | 6 | System | ⬜ |
+| 6b | Logo animation (final mark only) | ⬜ |
 | 7 | Applications | ⬜ |
 | 8 | Usage guidelines | ⬜ |
 | 9 | Presentation PDF | ⬜ |
@@ -85,6 +86,13 @@ Deadline: submit **before 20 Nov 2026**. The target is 18 Nov, which leaves a da
 - **Lockup with the master logo:** position, divider, size ratio.
 - **Rules:** clear space (based on the emblem's ring), minimum sizes (print mm and screen px), misuse examples.
 - **Gate:** every application in `docs/CHECKLIST.md` §A has a matching variation.
+
+## 6b · Logo animation ⬜ (final mark only)
+- Start only after Step 6. Never animate exploration concepts.
+- A 3–5 s reveal: the 11 draws in or the doors open, light comes through, the emblem settles, then the ribbon and the words.
+- **Out:** MP4 (1080×1080 and 1920×1080), a transparent version (WebM, or a GIF for WhatsApp), a 9:16 story cut, and a static end frame.
+- **Tools:** After Effects (from the Illustrator layers) or Figma Smart Animate for the storyboard.
+- **Gate:** it works on mute, holds a 1 s end frame, and is under 5 MB for social.
 
 ## 7 · Applications ⬜
 - Mock up the priority list in `docs/CHECKLIST.md` §A.
