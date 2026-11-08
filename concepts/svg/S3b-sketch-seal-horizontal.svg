@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" width="560" height="280" role="img" aria-label="Sketch S3: horizontal lockup">
+  <title>Sketch S3: horizontal lockup</title>
+  <defs>
+    <linearGradient id="s3b-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6DE8F"/>
+      <stop offset="0.45" stop-color="#D2AB48"/>
+      <stop offset="1" stop-color="#A4802A"/>
+    </linearGradient>
+    <linearGradient id="s3b-ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#A4802A"/>
+      <stop offset="0.3" stop-color="#D2AB48"/>
+      <stop offset="0.55" stop-color="#F6DE8F"/>
+      <stop offset="0.8" stop-color="#D2AB48"/>
+      <stop offset="1" stop-color="#A4802A"/>
+    </linearGradient>
+    <linearGradient id="s3b-line" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#279C49"/>
+      <stop offset="1" stop-color="#0F6030"/>
+    </linearGradient>
+    <clipPath id="s3b-disc"><circle cx="100" cy="100" r="87"/></clipPath>
+  </defs>
+  <path id="tail-left" d="M3 92H45V128H3L15 110Z" fill="url(#s3b-ribbon)" stroke="#7A5E1C" stroke-width="1"/>
+  <path id="tail-right" d="M185 92H227L215 110L227 128H185Z" fill="url(#s3b-ribbon)" stroke="#7A5E1C" stroke-width="1"/>
+  
+  <g id="emblem" transform="translate(30 25) scale(0.85)">
+    <circle id="emblem-ring" cx="100" cy="100" r="99" fill="#279C49"/>
+    <circle cx="100" cy="100" r="91" fill="#FFFFFF"/>
+    <g id="emblem-quadrants" clip-path="url(#s3b-disc)">
+      <rect x="100" y="0" width="100" height="100" fill="#279C49"/>
+      <rect x="0" y="100" width="100" height="100" fill="#279C49"/>
+      <path d="M100 0V200M0 100H200" stroke="#FFFFFF" stroke-width="5"/>
+    </g>
+    <g id="icon-roti" transform="rotate(-14 58 64)" stroke="#279C49" stroke-width="3.6" fill="#FFFFFF">
+      <ellipse cx="58" cy="76" rx="31" ry="12"/>
+      <ellipse cx="58" cy="68" rx="31" ry="12"/>
+      <ellipse cx="58" cy="60" rx="31" ry="12"/>
+      <g fill="#279C49" stroke="none">
+        <circle cx="44" cy="58" r="1.8"/><circle cx="54" cy="54" r="1.8"/><circle cx="66" cy="56" r="1.8"/>
+        <circle cx="50" cy="63" r="1.8"/><circle cx="62" cy="63" r="1.8"/><circle cx="74" cy="61" r="1.8"/>
+      </g>
+    </g>
+    <g id="icon-tools" stroke="#FFFFFF" stroke-linecap="round" fill="none">
+      <path d="M124 40L146 62" stroke-width="5"/>
+      <path d="M147 63L161 77" stroke-width="12"/>
+      <path d="M126 82L150 54" stroke-width="7"/>
+      <circle cx="157" cy="46" r="9.5" stroke-width="6"/>
+      <path d="M157 46L168 35" stroke="#279C49" stroke-width="7"/>
+      <circle cx="124" cy="85" r="3" fill="#279C49" stroke="none"/>
+    </g>
+    <g id="icon-tap" fill="#FFFFFF">
+      <rect x="18" y="122" width="7" height="18" rx="1.5"/>
+      <path d="M25 125H66Q82 125 82 141V150H70V142Q70 137 65 137H25Z"/>
+      <rect x="48" y="112" width="6" height="14"/>
+      <rect x="38" y="108" width="26" height="6" rx="3"/>
+      <path d="M76 157C76 157 68 167 68 172A8 8 0 0 0 84 172C84 167 76 157 76 157Z"/>
+    </g>
+    <g id="icon-heart" fill="none" stroke="#279C49" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M142 176C108 154 108 126 124 121C133 118 140 124 142 130C144 124 151 118 160 121C176 126 176 154 142 176Z" stroke-width="5"/>
+      <path d="M114 146H130L135 136L141 160L147 128L152 146H170" stroke-width="3.6"/>
+    </g>
+  </g>
+  <g id="slab-11" transform="translate(81 201) scale(0.68)">
+    <path d="M8 18L22 4H40V78H58V18L72 4H90V78H100V100H0V78H8Z" transform="translate(3 3)" fill="#7A5E1C"/>
+    <path d="M8 18L22 4H40V78H58V18L72 4H90V78H100V100H0V78H8Z" fill="url(#s3b-gold)" stroke="#0F6030" stroke-width="2.4" stroke-linejoin="round"/>
+  </g>
+  <g id="wordmark-stack" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="800">
+    
+    <text x="255" y="122" font-size="34" fill="#279C49" letter-spacing="1">HAMMAD</text>
+    <text x="255" y="158" font-size="34" fill="#0F6030" letter-spacing="1">FOUNDATION</text>
+  </g>
+</svg>

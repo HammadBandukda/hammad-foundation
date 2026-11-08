@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" width="480" height="440" role="img" aria-label="Sketch S3: commemorative seal">
+  <title>Sketch S3: commemorative seal</title>
+  <defs>
+    <linearGradient id="s3a-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6DE8F"/>
+      <stop offset="0.45" stop-color="#D2AB48"/>
+      <stop offset="1" stop-color="#A4802A"/>
+    </linearGradient>
+    <linearGradient id="s3a-ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#A4802A"/>
+      <stop offset="0.3" stop-color="#D2AB48"/>
+      <stop offset="0.55" stop-color="#F6DE8F"/>
+      <stop offset="0.8" stop-color="#D2AB48"/>
+      <stop offset="1" stop-color="#A4802A"/>
+    </linearGradient>
+    <linearGradient id="s3a-line" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#279C49"/>
+      <stop offset="1" stop-color="#0F6030"/>
+    </linearGradient>
+    <clipPath id="s3a-disc"><circle cx="100" cy="100" r="87"/></clipPath>
+  </defs>
+  <g id="ribbon-left"><path d="M24 173H134V207H24L36 190Z" fill="url(#s3a-ribbon)" stroke="#7A5E1C" stroke-width="1"/>
+    <text x="42" y="196" text-anchor="start" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="800" font-size="16" fill="#0F6030">2015</text></g>
+  <g id="ribbon-right"><path d="M346 173H456L444 190L456 207H346Z" fill="url(#s3a-ribbon)" stroke="#7A5E1C" stroke-width="1"/>
+    <text x="438" y="196" text-anchor="end" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="800" font-size="16" fill="#0F6030">2026</text></g>
+  <circle id="seal-band" cx="240" cy="190" r="158" fill="#0F6030"/>
+  <circle cx="240" cy="190" r="153" fill="none" stroke="#D2AB48" stroke-width="1.5"/>
+  <circle cx="240" cy="190" r="122" fill="#FFFFFF"/>
+  
+  <g id="emblem" transform="translate(125 75) scale(1.15)">
+    <circle id="emblem-ring" cx="100" cy="100" r="99" fill="#279C49"/>
+    <circle cx="100" cy="100" r="91" fill="#FFFFFF"/>
+    <g id="emblem-quadrants" clip-path="url(#s3a-disc)">
+      <rect x="100" y="0" width="100" height="100" fill="#279C49"/>
+      <rect x="0" y="100" width="100" height="100" fill="#279C49"/>
+      <path d="M100 0V200M0 100H200" stroke="#FFFFFF" stroke-width="5"/>
+    </g>
+    <g id="icon-roti" transform="rotate(-14 58 64)" stroke="#279C49" stroke-width="3.6" fill="#FFFFFF">
+      <ellipse cx="58" cy="76" rx="31" ry="12"/>
+      <ellipse cx="58" cy="68" rx="31" ry="12"/>
+      <ellipse cx="58" cy="60" rx="31" ry="12"/>
+      <g fill="#279C49" stroke="none">
+        <circle cx="44" cy="58" r="1.8"/><circle cx="54" cy="54" r="1.8"/><circle cx="66" cy="56" r="1.8"/>
+        <circle cx="50" cy="63" r="1.8"/><circle cx="62" cy="63" r="1.8"/><circle cx="74" cy="61" r="1.8"/>
+      </g>
+    </g>
+    <g id="icon-tools" stroke="#FFFFFF" stroke-linecap="round" fill="none">
+      <path d="M124 40L146 62" stroke-width="5"/>
+      <path d="M147 63L161 77" stroke-width="12"/>
+      <path d="M126 82L150 54" stroke-width="7"/>
+      <circle cx="157" cy="46" r="9.5" stroke-width="6"/>
+      <path d="M157 46L168 35" stroke="#279C49" stroke-width="7"/>
+      <circle cx="124" cy="85" r="3" fill="#279C49" stroke="none"/>
+    </g>
+    <g id="icon-tap" fill="#FFFFFF">
+      <rect x="18" y="122" width="7" height="18" rx="1.5"/>
+      <path d="M25 125H66Q82 125 82 141V150H70V142Q70 137 65 137H25Z"/>
+      <rect x="48" y="112" width="6" height="14"/>
+      <rect x="38" y="108" width="26" height="6" rx="3"/>
+      <path d="M76 157C76 157 68 167 68 172A8 8 0 0 0 84 172C84 167 76 157 76 157Z"/>
+    </g>
+    <g id="icon-heart" fill="none" stroke="#279C49" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M142 176C108 154 108 126 124 121C133 118 140 124 142 130C144 124 151 118 160 121C176 126 176 154 142 176Z" stroke-width="5"/>
+      <path d="M114 146H130L135 136L141 160L147 128L152 146H170" stroke-width="3.6"/>
+    </g>
+  </g>
+  <g id="arc-top" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="800" font-size="16" fill="#fff" text-anchor="middle"><text transform="translate(136.3 106.7) rotate(-51.2)">H</text><text transform="translate(146.3 95.6) rotate(-44.8)">A</text><text transform="translate(157.4 85.8) rotate(-38.4)">M</text><text transform="translate(169.5 77.2) rotate(-32.0)">M</text><text transform="translate(182.5 70.1) rotate(-25.6)">A</text><text transform="translate(196.3 64.4) rotate(-19.2)">D</text><text transform="translate(225.2 57.8) rotate(-6.4)">F</text><text transform="translate(240.0 57.0) rotate(0.0)">O</text><text transform="translate(254.8 57.8) rotate(6.4)">U</text><text transform="translate(269.5 60.3) rotate(12.8)">N</text><text transform="translate(283.7 64.4) rotate(19.2)">D</text><text transform="translate(297.5 70.1) rotate(25.6)">A</text><text transform="translate(310.5 77.2) rotate(32.0)">T</text><text transform="translate(322.6 85.8) rotate(38.4)">I</text><text transform="translate(333.7 95.6) rotate(44.8)">O</text><text transform="translate(343.7 106.7) rotate(51.2)">N</text></g>
+  <g id="arc-left" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="800" font-size="16" fill="#fff" text-anchor="middle"><text transform="translate(95.0 214.3) rotate(80.5)">C</text><text transform="translate(98.3 229.0) rotate(74.6)">E</text><text transform="translate(103.0 243.4) rotate(68.7)">L</text><text transform="translate(109.3 257.2) rotate(62.8)">E</text><text transform="translate(116.9 270.3) rotate(56.9)">B</text><text transform="translate(125.8 282.5) rotate(51.0)">R</text><text transform="translate(135.9 293.8) rotate(45.1)">A</text><text transform="translate(147.1 303.9) rotate(39.2)">T</text><text transform="translate(159.3 312.9) rotate(33.3)">I</text><text transform="translate(172.4 320.5) rotate(27.4)">N</text><text transform="translate(186.1 326.8) rotate(21.5)">G</text></g>
+  <g id="arc-right" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="800" font-size="16" fill="#fff" text-anchor="middle"><text transform="translate(293.9 326.8) rotate(-21.5)">A</text><text transform="translate(307.6 320.5) rotate(-27.4)">N</text><text transform="translate(320.7 312.9) rotate(-33.3)">N</text><text transform="translate(332.9 303.9) rotate(-39.2)">I</text><text transform="translate(344.1 293.8) rotate(-45.1)">V</text><text transform="translate(354.2 282.5) rotate(-51.0)">E</text><text transform="translate(363.1 270.3) rotate(-56.9)">R</text><text transform="translate(370.7 257.2) rotate(-62.8)">S</text><text transform="translate(377.0 243.4) rotate(-68.7)">A</text><text transform="translate(381.7 229.0) rotate(-74.6)">R</text><text transform="translate(385.0 214.3) rotate(-80.5)">Y</text></g>
+  <g id="slab-11" transform="translate(198 318) scale(0.84)">
+    <path d="M8 18L22 4H40V78H58V18L72 4H90V78H100V100H0V78H8Z" transform="translate(3 3)" fill="#7A5E1C"/>
+    <path d="M8 18L22 4H40V78H58V18L72 4H90V78H100V100H0V78H8Z" fill="url(#s3a-gold)" stroke="#0F6030" stroke-width="2.4" stroke-linejoin="round"/>
+  </g>
+  <text id="th" x="290" y="388" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="800" font-size="20" fill="#A4802A">TH</text>
+</svg>

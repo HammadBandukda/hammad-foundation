@@ -97,6 +97,8 @@ Write scores as 12 digits in C1–C12 order, e.g. `222212221110`.
 | S1c Sketch: held up by eleven | | | |
 | S2a Sketch: horizontal lockup | | | |
 | S2b Sketch: with divider | | | |
+| S3a Sketch: seal | | | |
+| S3b Sketch: seal, horizontal lockup | | | |
 
 Fill this in during Step 4, after the sketches are in.
 
@@ -123,5 +125,5 @@ The 11 Years mark stays the focus. One PDF page shows the wider idea:
 ## 6 · Open questions for the media team (next email)
 1. Are food, skills, water and health the official four pillars? Where do education and legal aid fit?
 2. 2027 goals or theme (already asked on 4 Nov, awaiting reply).
-3. Founding year (2015 or 2016), for a possible "Since 20XX" line.
+3. Founding year (2015 or 2016), for a possible "Since 20XX" line. Sketch S3 shows 2015–2026, but the 10th anniversary was celebrated in early 2026, which points to 2016–2027.
 4. Is an Urdu or bilingual mark welcome?

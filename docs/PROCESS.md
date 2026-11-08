@@ -63,6 +63,7 @@ Deadline: submit **before 20 Nov 2026**. The target is 18 Nov, which leaves a da
   - Hammad's hand sketches
   - Digital directions A–H4 (`concepts/`, Figma 03 and 03 · Archive)
   - Sketches 5 Nov: S1 (emblem + 11 + "Serving the Country" plinth) and S2 (horizontal "11 Years of Hammad Foundation" lockup), in `sketches/2026-11-05/` and Figma 03; digitised as S1a–c and S2a–b (`concepts/svg/S*.svg`)
+  - Sketch 8 Nov: S3 commemorative seal (`sketches/2026-11-08/`), digitised as S3a (seal) and S3b (horizontal lockup)
 - **Gate:** at least two directions meet every **Must** in step 2.
 - **Capture:** sketch scans, the archived directions and why each was dropped (`CONTEXT.md` log).
 

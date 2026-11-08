@@ -282,6 +282,43 @@ function stackedName(x, y, withYears = true) {
   </g>`;
 }
 
+
+// ---------- sketch S3: commemorative seal ----------
+// letters placed one by one on an arc (rotated <text>, so Figma and Illustrator keep them editable)
+function arcText(str, cx, cy, r, center, step, { bottom = false, size = 16, color = "#fff", id = "arc-text" } = {}) {
+  const chars = [...str]; const n = chars.length;
+  return `<g id="${id}" font-family="${MONT}" font-weight="800" font-size="${size}" fill="${color}" text-anchor="middle">${chars.map((ch, i) => {
+    const a = bottom ? center - (i - (n - 1) / 2) * step : center + (i - (n - 1) / 2) * step;
+    const t = (a * Math.PI) / 180; const x = cx + r * Math.cos(t), y = cy + r * Math.sin(t);
+    const rot = bottom ? a - 90 : a + 90;
+    return ch === " " ? "" : `<text transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${rot.toFixed(1)})">${ch}</text>`;
+  }).join("")}</g>`;
+}
+function yearRibbon(p, x, y, w, label, side) {
+  const h = 34, notch = 12;
+  const d = side === "left"
+    ? `M${x} ${y}H${x + w}V${y + h}H${x}L${x + notch} ${y + h / 2}Z`
+    : `M${x} ${y}H${x + w}L${x + w - notch} ${y + h / 2}L${x + w} ${y + h}H${x}Z`;
+  const tx = side === "left" ? x + notch + 6 : x + w - notch - 6;
+  return `<g id="ribbon-${side}"><path d="${d}" fill="url(#${p}-ribbon)" stroke="${C.goldShade}" stroke-width="1"/>
+    <text x="${tx}" y="${y + 23}" text-anchor="${side === "left" ? "start" : "end"}" font-family="${MONT}" font-weight="800" font-size="16" fill="${C.deep}">${label}</text></g>`;
+}
+function seal(p, cx, cy, { years = ["2015", "2026"] } = {}) {
+  const R = 158, r = 122, e = 230;
+  return `
+  ${yearRibbon(p, cx - R - 58, cy - 17, 110, years[0], "left")}
+  ${yearRibbon(p, cx + R - 52, cy - 17, 110, years[1], "right")}
+  <circle id="seal-band" cx="${cx}" cy="${cy}" r="${R}" fill="${C.deep}"/>
+  <circle cx="${cx}" cy="${cy}" r="${R - 5}" fill="none" stroke="${C.gold}" stroke-width="1.5"/>
+  <circle cx="${cx}" cy="${cy}" r="${r}" fill="${C.white}"/>
+  ${emblem(p, cx - e / 2, cy - e / 2, e)}
+  ${arcText("HAMMAD FOUNDATION", cx, cy, 133, -90, 6.4, { id: "arc-top" })}
+  ${arcText("CELEBRATING", cx, cy, 147, 141, 5.9, { bottom: true, id: "arc-left" })}
+  ${arcText("ANNIVERSARY", cx, cy, 147, 39, 5.9, { bottom: true, id: "arc-right" })}
+  ${slab11(p, cx - 42, cy + r + 6, 84)}
+  <text id="th" x="${cx + 50}" y="${cy + r + 76}" font-family="${MONT}" font-weight="800" font-size="20" fill="${C.goldLo}">TH</text>`;
+}
+
 // almond leaf with a midrib; angle in degrees, 0 points right
 function leaf(x, y, len, angle, color) {
   const w = len * 0.36;
@@ -624,6 +661,38 @@ const concepts = [
   <rect id="divider" x="243" y="40" width="4" height="180" fill="${C.gold}"/>
   ${slab11(p, 272, 55, 150)}
   ${stackedName(445, 92)}`, "Sketch S2 variant: lockup with divider");
+    },
+  },
+  {
+    key: "s3a",
+    sketch: true,
+    file: "S3a-sketch-seal.svg",
+    name: "Sketch S3 · Seal",
+    pitch: "Hammad's sketch (8 Nov): the emblem inside a seal ring reading HAMMAD FOUNDATION and CELEBRATING … ANNIVERSARY, with year ribbons on each side and a slab 11TH hanging at the bottom like a medal.",
+    idea: "A commemorative seal: the foundation's four promises framed as a badge of eleven years.",
+    reads: "The 11 sits below the emblem, so it never takes a digit slot and the emblem stays whole. A badge shape suits T-shirts, stickers, certificates and vest patches.",
+    risk: "Ring text disappears below about 80 px, so it needs a simple icon version. The years must be confirmed: 2015–2026 means the 11th anniversary is in 2026, but the 10th was celebrated in early 2026.",
+    build(p) {
+      return svg(p, 480, 440, seal(p, 240, 190), "Sketch S3: commemorative seal");
+    },
+  },
+  {
+    key: "s3b",
+    sketch: true,
+    file: "S3b-sketch-seal-horizontal.svg",
+    name: "Sketch S3 · Horizontal lockup",
+    pitch: "From the bottom of the same page: the emblem with small ribbon tails, a slab 11 tucked beneath it, and HAMMAD FOUNDATION beside it.",
+    idea: "The seal simplified into a header and signboard lockup.",
+    reads: "The 11 hangs under the emblem like a medal, not beside it, so it does not read as “011” or “110”.",
+    risk: "The 11 is small under the emblem, so it needs to be bold enough at header size. The ribbon tails add detail that may blur at small sizes.",
+    build(p) {
+      const cx = 115, cy = 110, e = 170;
+      return svg(p, 560, 280, `
+  <path id="tail-left" d="M${cx - 112} ${cy - 18}H${cx - 70}V${cy + 18}H${cx - 112}L${cx - 100} ${cy}Z" fill="url(#${p}-ribbon)" stroke="${C.goldShade}" stroke-width="1"/>
+  <path id="tail-right" d="M${cx + 70} ${cy - 18}H${cx + 112}L${cx + 100} ${cy}L${cx + 112} ${cy + 18}H${cx + 70}Z" fill="url(#${p}-ribbon)" stroke="${C.goldShade}" stroke-width="1"/>
+  ${emblem(p, cx - e / 2, cy - e / 2, e)}
+  ${slab11(p, cx - 34, cy + e / 2 + 6, 68)}
+  ${stackedName(255, 92, false)}`, "Sketch S3: horizontal lockup");
     },
   },
 ];
