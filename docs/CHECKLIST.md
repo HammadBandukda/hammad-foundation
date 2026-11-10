@@ -53,6 +53,8 @@ Built from their website, signage, photos and social channels. **P1** must be in
 - [ ] Presentation PDF (16:9, under 15 MB)
 - [ ] Guidelines pages (inside the PDF or standalone)
 
+- [ ] **Vector emblem:** the current .ai places the emblem as a raster (PNG). Get a vector from the media team or redraw it.
+
 ## D · Before sending
 - [ ] Spelling and Urdu checked by a native reader
 - [ ] Every font is licensed or converted to outlines

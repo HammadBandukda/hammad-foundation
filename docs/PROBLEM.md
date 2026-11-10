@@ -99,6 +99,8 @@ Write scores as 12 digits in C1–C12 order, e.g. `222212221110`.
 | S2b Sketch: with divider | | | |
 | S3a Sketch: seal | | | |
 | S3b Sketch: seal, horizontal lockup | | | |
+| AI-1 Illustrator: stacked, 11 holds the emblem | | | |
+| AI-2 Illustrator: seal with 11TH rosette | | | |
 
 Fill this in during Step 4, after the sketches are in.
 
