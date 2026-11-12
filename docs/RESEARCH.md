@@ -18,6 +18,10 @@ Gathered 5 Nov 2026. Most sources are studio blogs and published brand guides, s
   - **Motion as part of the identity.** The 40 draws on in one stroke and the 0 closes around the date. Ours could have the doorways open and light pour through, for social posts and the website.
   - **Applications shown (screenshots in `reference/inspiration/pentagram-mta-40/`):** a hero motion film; a subway digital poster with the campaign line and the lockup small in the footer; a tote with a one-colour white lockup on violet; an event screen; a poster triptych; a sticker sheet in violet and white. The lockup is always *the master logo plus the anniversary mark together*.
   - **Page structure:** title and one-line descriptor, then story copy (background, construction, colour, line, motion, applications), then credits. Short, confident, mostly visual.
+- **Save Our Environment Trust (Zimbabwe), 11 Years, 2015–2026** (`reference/inspiration/web/soet-11-years-anniversary-poster.jpg`, shared by Hammad on 12 Nov). Another NGO's 11th, with the same start year.
+  - **Their mark:** a gold ring holding a green 11, a "YEARS" ribbon and "Anniversary" in script. This is the stock anniversary-badge look, so our mark must not drift into it. AI-2 (the seal) sits closest to it.
+  - **Worth borrowing for the poster and the PDF:** "Since 2015, we have been…" as a checklist, then a row of six goal icons with one-line captions. That is the SDG-style goals strip, which maps directly onto `GOALS.md` and the pillar icons.
+  - **Headline formula:** "11 Years of Purpose. A Lifetime of Commitment." Two beats, and it works for a campaign line.
 - **Lockups:** most guides define the anniversary mark plus the master logo in horizontal and stacked forms, separated by a divider, with the master logo left unchanged.
   - [Detroit Mercy 150 guide](https://www.udmercy.edu/150/files/DM-150-Brand-Guidelines-2026-FINAL.pdf)
   - [MCC 20th anniversary guide](https://www.mcc.gov/resources/doc/20th-anniv-branding-guidelines/)
