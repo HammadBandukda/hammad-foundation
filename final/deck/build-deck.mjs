@@ -55,17 +55,20 @@ pages.push(page(`${kicker("The brief")}<h2>Mark eleven years. Keep the logo.</h2
     <div><h3>Work everywhere</h3><p>Website, signboards, banners, billboards, T-shirts, hi-vis vests, campaigns and social posts.</p></div>
   </div>${foot(2)}`));
 // 03 series
-pages.push(page(`${kicker("Their own series")}<h2>Nine, ten… eleven</h2>
-  <div class="series">
-    <div class="series-item"><div class="num">9</div><p><b>2025 · Years of Change.</b> The emblem became the bowl of the 9.</p></div>
-    <div class="series-item"><img src="${img("reference/hf-10-years-logo.png")}" style="height:300px"><p><b>2026 · Decade of Change.</b> The emblem became the 0.</p></div>
-    <div class="series-item"><div class="num gold">11</div><p><b>2027.</b> Eleven has no round digit. Put the emblem beside “11” and it reads <b>“110”</b>.</p></div>
+const hist = (file, yrs, cap, h = 250) => `<div class="hist"><div class="hist-img"><img src="${img("reference/logo-history/" + file)}" style="max-height:${h}px;max-width:300px"></div><p class="hist-y">${yrs}</p><p class="hist-c">${cap}</p></div>`;
+pages.push(page(`${kicker("Their own story")}<h2>Eleven years in five marks</h2>
+  <div class="timeline">
+    ${hist("hf-logo-2015-2020-first.png", "2015–2020", "Two hands hold up the globe.")}
+    ${hist("hf-logo-2020-2024-emblem.png", "2020–2024", "Four promises in one emblem.")}
+    ${hist("hf-9-years-2024-2025.png", "2024–2025", "The emblem becomes the bowl of the 9.")}
+    ${hist("hf-10-years-2025-2026-card.png", "2025–2026", "The emblem becomes the 0.")}
+    <div class="hist next"><div class="hist-img">${S("HF11_stacked_fullcolour.svg", 130, 250)}</div><p class="hist-y" style="color:${C.gold}">2026–2027</p><p class="hist-c">Eleven has no round digit. Beside “11” the emblem reads “110”.</p></div>
   </div>
-  <p class="note">Vignelli's Abdi İbrahim 100 drew the 0 as the company's emblem: the anniversary becomes part of the brand instead of a number placed next to it. Eleven needs a new way to do the same.</p>${foot(3)}`));
+  <p class="note">Source: Hammad Foundation, “History of logos at Hammad Foundation”, Instagram, 13 Nov 2026. Vignelli's Abdi İbrahim 100 drew the 0 as the company's emblem; eleven needs a new move.</p>${foot(3)}`));
 // 04 idea
 pages.push(page(`<div class="split">
   <div class="split-text">${kicker("The idea")}<h2>Eleven years hold up the emblem</h2>
-    <p class="lede">The two 1s stand under the emblem and are carved by its own circle, so they cradle it. The number grows out of the emblem's geometry, and the emblem stays whole.</p>
+    <p class="lede">In 2015, two hands held up the globe. In 2026, eleven years hold up the emblem: the two 1s stand under it and are carved by its own circle. The number grows out of the emblem's geometry, and the emblem stays whole.</p>
     <ul class="ticks"><li>Reads as 11, never 110</li><li>The emblem is untouched</li><li>Gold numeral, as in the 10 Years mark</li><li>The “Years” ribbon continues the series</li></ul>
   </div>
   <div class="split-art">${S("HF11_stacked_fullcolour.svg", 470, 900)}</div></div>${foot(4)}`));
@@ -209,7 +212,8 @@ pages.push(page(`<div class="split">
   <div class="split-art">${S("HF11_stacked_reversed.svg", 420, 805)}</div></div>${foot(19, true)}`, { bg: C.deep }));
 
 const css = `
-@font-face{font-family:Montserrat;src:url(../fonts/Montserrat-ExtraBold.ttf);font-weight:800}
+@font-face{font-family:Montserrat;src:url(../fonts/Montserrat-Medium.ttf);font-weight:500}
+@font-face{font-family:Montserrat;src:url(../fonts/Montserrat-ExtraBold.ttf);font-weight:600 800}
 @font-face{font-family:Montserrat;src:url(../fonts/Montserrat-Black.ttf);font-weight:900}
 @font-face{font-family:Nastaliq;src:url(../fonts/NotoNastaliqUrdu-Bold.ttf);font-weight:700}
 @page{size:1920px 1080px;margin:0}
@@ -236,6 +240,7 @@ p{font:500 24px/1.45 Montserrat;margin:0}
 blockquote{font:600 40px/1.35 Montserrat;margin:10px 0 60px;max-width:1400px;border-left:10px solid ${C.gold};padding-left:36px}
 blockquote cite{display:block;font:500 22px Montserrat;color:#4F6357;margin-top:16px;font-style:normal}
 .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:60px}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;align-items:end;margin-top:10px}.hist{display:flex;flex-direction:column;gap:12px}.hist-img{height:270px;display:flex;align-items:flex-end;justify-content:center;background:#F5F7F3;border-radius:14px;padding:10px}.hist-img img{border-radius:8px}.hist.next .hist-img{background:#FBF6E6;outline:3px solid ${C.gold}}.hist-y{font:900 30px Montserrat;color:${C.deep}}.hist-c{font:500 21px/1.4 Montserrat}
 .series{display:grid;grid-template-columns:repeat(3,1fr);gap:60px;align-items:end;margin-top:20px}
 .series-item{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
 .num{font:900 300px/1 Montserrat;color:${C.deep}}.num.gold{color:${C.gold}}

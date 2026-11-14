@@ -16,7 +16,7 @@ This is Steps 1b–2 of `docs/PROCESS.md`. Every concept is judged against this 
 
 - It's a circle split into four alternating green and white quadrants, with a thick green ring and line icons.
 - **Not in the emblem:** education (Heroics School, HFSF), legal aid, flood relief, and the green and civic campaigns. They are real programmes that sit outside the four pillars.
-- [ ] **Confirm with the media team:** are these four the official pillars, and where do education and legal aid belong?
+- [x] **Confirmed** by the foundation's own post (13 Nov 2026): “The anniversary logo brought food, skills, clean water and healthcare together in one emblem.”
 
 ### The rest of the identity
 - **Wordmark:** at least four versions on the site alone (thin sans, serif, two heavy rounded faces), plus bold caps on signage and spaced caps on the 9 Years mark.

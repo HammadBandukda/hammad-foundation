@@ -106,3 +106,12 @@ Check every figure with the actual printer ([A4 Apparel](https://js.a4apparel.co
   - **The gold ribbon is campaign language:** a gold ribbon carries "Coming Soon" across the poster. Keep a ribbon or gold device in the 11 Years system so it links to their campaign graphics.
   - **Style:** bold 3D green display type, Pakistan-flag running kit (green and white, crescent and star), AI-generated imagery. The mark needs to stay clean and flat to hold up against loud artwork.
   - **New applications:** marathons and runs need race bibs, finish-line banners, medals and running vests.
+
+## 8 · Official logo history (Hammad Foundation Instagram, 13 Nov 2026)
+`reference/logo-history/instagram-logo-journey-2026-11-13/` (9 slides), with crops in `reference/logo-history/hf-*.png`.
+- **Established 2015.** This settles the founding-year question.
+- **2015–2020: first logo.** A globe held between two green leaf-hand swooshes, with a serif “Hammad Foundation” and the hashtag. The 11 Years mark echoes it: two 1s hold up the emblem the way two hands held the globe.
+- **2020–2024:** the quartered emblem with HAMMAD FOUNDATION in heavy capitals (the master logo).
+- **2024–2025:** 9 Years, “Years of Change”. **2025–2026:** 10 Years. So the 11 Years period is **2026–2027**.
+- **Pillars confirmed:** “food, skills, clean water and healthcare together in one emblem.”
+- **Contest copy:** “Hammad Foundation Turns 11! Design a creative logo…”, prize PKR 25,000, deadline 20 Nov 2026, “Let your creativity represent our journey!”, “One Vision. One Mission. A Better Pakistan.”
