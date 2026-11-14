@@ -11,12 +11,12 @@ Deadline: submit **before 20 Nov 2026**. The target is 18 Nov, which leaves a da
 | 2 | Strategy: concept criteria | ✅ Approved 14 Nov |
 | 3 | Ideation | ✅ 16 concepts |
 | 4 | Selection | ✅ AI-1 Stacked (reserve: H3 Doorway). Scores in PROBLEM.md |
-| 5 | Refinement | ✅ T2 (gold 11, green ribbon), vector emblem traced |
-| 6 | System | ✅ `final/`: 21 SVG variants, outlined text, PNG @1x/2x/4x, favicon set |
+| 5 | Refinement | 🟡 Draft of AI-1 T2 in Figma 04b, awaiting Hammad's review |
+| 6 | System | ⬜ Not started (draft variants exist only for review) |
 | 6b | Logo animation (final mark only) | ⬜ |
-| 7 | Applications | ✅ Vector mockups in the deck (digital, apparel, signage, events, merch) |
-| 8 | Usage guidelines | ✅ Deck p.9–13 |
-| 9 | Presentation PDF | 🟡 v1 built: `final/HF-11-Years-Proposal-Hammad-Hanif-Bandukda.pdf` (19 pp), awaiting Hammad's review |
+| 7 | Applications | ⬜ On hold until the logo is final |
+| 8 | Usage guidelines | ⬜ On hold |
+| 9 | Presentation PDF | ⬜ On hold (a deck draft exists in `final/deck/`; do not touch until the logo is approved) |
 | 10 | Production files | ⬜ |
 | 11 | Submission | ⬜ |
 | 12 | Portfolio case study | ⬜ |
