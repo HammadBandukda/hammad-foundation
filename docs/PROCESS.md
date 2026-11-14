@@ -7,11 +7,11 @@ Deadline: submit **before 20 Nov 2026**. The target is 18 Nov, which leaves a da
 | # | Step | Status |
 |---|---|---|
 | 0 | Brief and discovery | ✅ Done |
-| 1 | Research | 🟡 Mostly done |
-| 2 | Strategy: concept criteria | 🟡 Drafted in `docs/PROBLEM.md`, awaiting approval |
-| 3 | Ideation | 🟡 In progress (Hammad sketching) |
-| 4 | Selection | ⬜ |
-| 5 | Refinement | ⬜ |
+| 1 | Research | ✅ Proceeding without the media-team reply (decided 14 Nov) |
+| 2 | Strategy: concept criteria | ✅ Approved 14 Nov |
+| 3 | Ideation | ✅ 16 concepts |
+| 4 | Selection | ✅ AI-1 Stacked (reserve: H3 Doorway). Scores in PROBLEM.md |
+| 5 | Refinement | 🟡 In progress (weekend sprint 14–15 Nov) |
 | 6 | System | ⬜ |
 | 6b | Logo animation (final mark only) | ⬜ |
 | 7 | Applications | ⬜ |

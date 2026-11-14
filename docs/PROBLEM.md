@@ -80,11 +80,35 @@ Score each concept 0–2: 0 fails, 1 partly, 2 fully. **Must** criteria need a 2
 | C11 | Has an Urdu version (۱۱ / سال / حماد فاؤنڈیشن), required by Hammad on 5 Nov | P5 | Must |
 | C12 | Has a motion idea (draw-on, doors opening) | P2 | Could |
 
-### Score sheet
-Write scores as 12 digits in C1–C12 order, e.g. `222212221110`.
+### Score sheet (scored 14 Nov 2026, criteria approved the same day)
+Scores in C1–C12 order. 2 = passes, 1 = partly, 0 = fails. Musts are C1–C7; a concept needs 2 on every Must.
 
-| Concept | Scores C1–C12 | Total | Passes all Musts? |
-|---|---|---|---|
+| Concept | Scores C1–C12 | Total /24 | Musts at 2 | Blocking Musts |
+|---|---|---|---|---|
+| H2 Doorway, Light | `222222121222` | 22 | 6/7 | C7 |
+| H3 Doorway, ۱۱ | `222222121222` | 22 | 6/7 | C7 |
+| AI-1 Illustrator: stacked, 11 holds the emblem | `222122221212` | 21 | 6/7 | C4 |
+| H1 Doorway, Skyline | `222210221212` | 19 | 5/7 | C5, C6 |
+| S2b Sketch: with divider | `212221221110` | 17 | 5/7 | C2, C6 |
+| H4 Doorway, Mehrab | `122221121121` | 18 | 4/7 | C1, C6, C7 |
+| S3b Sketch: seal, horizontal lockup | `212221121111` | 17 | 4/7 | C2, C6, C7 |
+| S2a Sketch: horizontal lockup | `112221221110` | 16 | 4/7 | C1, C2, C6 |
+| G2 Line Grove | `212211011212` | 16 | 3/7 | C2, C5, C6, C7 |
+| S1c Sketch: held up by eleven | `122211111211` | 16 | 3/7 | C1, C5, C6, C7 |
+| S3a Sketch: seal | `212210111211` | 15 | 3/7 | C2, C5, C6, C7 |
+| F Two Hands | `112211111212` | 16 | 2/7 | C1, C2, C5, C6, C7 |
+| E1 Twin Trees | `112210111212` | 15 | 2/7 | C1, C2, C5, C6, C7 |
+| S1b Sketch: emblem kept clear | `112211111211` | 15 | 2/7 | C1, C2, C5, C6, C7 |
+| S1a Sketch: as drawn | `210211111211` | 14 | 2/7 | C2, C3, C5, C6, C7 |
+| AI-2 Illustrator: seal with 11TH rosette | `211210111211` | 14 | 2/7 | C2, C3, C5, C6, C7 |
+
+**Result:** no concept passes every Must as it stands. Three are one fixable step away:
+- **AI-1 (21/24):** only C4 (part of the 9/10 series) is missing. Fix: green or flat-gold 11, a gold “Years” ribbon or rule. **Selected by Hammad on 14 Nov.**
+- **H2 / H3 Doorway (22/24):** only C7 (deep-green background) is missing. Fix: a keyline. H3 is the reserve if AI-1 fails refinement.
+
+**C11 Urdu:** scored as feasibility. No concept has a finished Urdu version yet; AI-1 gets one in Step 6.
+
+---|---|---|---|
 | E1 Twin Trees | | | |
 | F Two Hands | | | |
 | G2 Line Grove | | | |
