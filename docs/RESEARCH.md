@@ -115,3 +115,21 @@ Check every figure with the actual printer ([A4 Apparel](https://js.a4apparel.co
 - **2024–2025:** 9 Years, “Years of Change”. **2025–2026:** 10 Years. So the 11 Years period is **2026–2027**.
 - **Pillars confirmed:** “food, skills, clean water and healthcare together in one emblem.”
 - **Contest copy:** “Hammad Foundation Turns 11! Design a creative logo…”, prize PKR 25,000, deadline 20 Nov 2026, “Let your creativity represent our journey!”, “One Vision. One Mission. A Better Pakistan.”
+
+## 9 · Other 11th-anniversary marks (14 Nov 2026, Figma 02e `3137:4145`)
+Images in `reference/inspiration/eleven-years/`.
+- **Competing entries already public:** "Hammad Foundation 11 years Logo" ([Behance](https://www.behance.net/gallery/258467549/Hammad-Foundation-11-years-Logo)), also posted as "Hammad Youth Foundation 11 Years Logo Concept" ([Dribbble](https://dribbble.com/shots/27881527-Hammad-Youth-Foundation-11-Years-Logo-Concept)). The 11 is two slabs and a star that read as an "H"; it drops the emblem. AI-1 keeps the emblem, so lead with C3. Keep stars and sparkles out of our mark.
+- **NGO, health and community 11ths:**
+  - SOET (stock gold badge).
+  - [Melsta Hospitals](https://melstahospitals.com/hospital-events-outreach/11th-year-anniversary-celebration): no mark, text only.
+  - Kazakh Wikipedia "11 жыл": a local-language ribbon on the unchanged master mark. This is the precedent for ۱۱ سال.
+  - MedCan Australia 10 (health): the emblem is the 0, the same move as HF 10.
+- **No mark found:** [Wheelchair Foundation](https://wheelchairfoundation.org/news/11years/), [Joy in Childhood](https://www.joyinchildhoodfoundation.org/stories/celebrating-11-years-of-making-a-difference-good-citizens-month-2025), [ONERHT](https://www.rhtlawasia.com/onerhtfoundation-11th-anniversary-charity-golf-gala-dinner-2026/), Robin Hood Army, Shahid Afridi Foundation, Bidyanondo, Rizq, and PUGA. In this sector, an 11th is usually only a caption.
+- **Other sectors:**
+  - [10 Infinity](https://www.behance.net/gallery/247570097/11th-Anniversary-10i-Logo): story-led strokes.
+  - [Pilot](https://dribbble.com/shots/2695573-11-Years): minimal vertical "11 YEARS".
+  - [Oktagon](https://www.behance.net/gallery/23217531/11th-Oktagon-Anniversary): brand pattern inside the 1s.
+  - [PAPS](https://www.behance.net/gallery/198388287/PAPS-11th-Anniversary-Logo): a "th" fixes a bare 1.
+  - [Dhaka Tribune](https://www.behance.net/gallery/214066565/Print-Ad-11-years-anniversary-of-Dhaka-Tribune): an idea poster.
+  - Algoworks: the laurel badge to avoid.
+- **Limit:** Instagram and Facebook can't be searched without a login.
