@@ -23,6 +23,8 @@ Built from their website, signage, photos and social channels. **P1** must be in
 | Print | Certificate (Skill Valley graduates) | "1,520 students graduated" | Seal version | P2 |
 | Print | Letterhead, donation receipt | Donations (Zakat, Sadqa) | Horizontal lockup | P2 |
 | Packaging | Food / ration bags (Rs 10 bags) | Ramadan camp | One-colour, flexo print | P2 |
+| Events | Marathon / run kit: race bib, finish-line banner, medal, running vest | “Pakistan's Biggest Marathon” poster (Nov 2026) | Stacked lockup, one-colour, medal seal | P1 |
+| Digital | Campaign poster sign-off: corner logo on busy imagery | Marathon poster uses the 10 Years mark top-right | Stacked mark + wordmark, white keyline | P1 |
 | Merch | Mug, tote, badge | Site has a "Merchandise" menu | One-colour, icon | P2 |
 
 ## B · Concept test (run on every finalist)

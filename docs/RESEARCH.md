@@ -99,3 +99,10 @@ Check every figure with the actual printer ([A4 Apparel](https://js.a4apparel.co
 ## Gaps
 - No published identity case studies for Pakistani NGOs (TCF, Akhuwat, Saylani, Edhi). Check Behance and LogoLounge manually if local references are needed.
 - Pre-2025 HF logos are still missing.
+
+## 7 · How they actually use the anniversary mark (field evidence)
+- **"Pakistan's Biggest Marathon: Coming Soon" poster** (`reference/logo-history/in-the-field/marathon-coming-soon-poster.png`, shared 14 Nov):
+  - The 10 Years mark sits **stacked above a HAMMAD FOUNDATION wordmark, small, in the top-right corner**, over a busy light-sky photo. The anniversary mark replaces the master logo on campaigns, so the 11 Years mark must work as the main sign-off at small corner size.
+  - **The gold ribbon is campaign language:** a gold ribbon carries "Coming Soon" across the poster. Keep a ribbon or gold device in the 11 Years system so it links to their campaign graphics.
+  - **Style:** bold 3D green display type, Pakistan-flag running kit (green and white, crescent and star), AI-generated imagery. The mark needs to stay clean and flat to hold up against loud artwork.
+  - **New applications:** marathons and runs need race bibs, finish-line banners, medals and running vests.
