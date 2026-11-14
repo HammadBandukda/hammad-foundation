@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><title>Hammad Foundation 11 Years: simplified favicon (16–32 px)</title>
+  <rect id="tile" width="100" height="100" rx="20" fill="#0F6030"/>
+  <g id="emblem-simplified">
+    <circle cx="50" cy="28" r="21" fill="#FFFFFF"/>
+    <path d="M50 10A18 18 0 0 1 68 28H50Z" fill="#259D48"/>
+    <path d="M50 46A18 18 0 0 1 32 28H50Z" fill="#259D48"/>
+  </g>
+  <g id="eleven" fill="#C9A13B">
+    <path d="M45 90H33V58L27 61V53L35 50.5Q40 52.5 45 52.5Z"/>
+    <path d="M73 90H61V58L55 61V53L63 50.5Q68 52.5 73 52.5Z"/>
+  </g>
+</svg>

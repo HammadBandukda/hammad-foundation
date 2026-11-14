@@ -11,8 +11,8 @@ Deadline: submit **before 20 Nov 2026**. The target is 18 Nov, which leaves a da
 | 2 | Strategy: concept criteria | ✅ Approved 14 Nov |
 | 3 | Ideation | ✅ 16 concepts |
 | 4 | Selection | ✅ AI-1 Stacked (reserve: H3 Doorway). Scores in PROBLEM.md |
-| 5 | Refinement | 🟡 In progress (weekend sprint 14–15 Nov) |
-| 6 | System | ⬜ |
+| 5 | Refinement | ✅ T2 (gold 11, green ribbon), vector emblem traced |
+| 6 | System | ✅ `final/`: 21 SVG variants, outlined text, PNG @1x/2x/4x, favicon set |
 | 6b | Logo animation (final mark only) | ⬜ |
 | 7 | Applications | ⬜ |
 | 8 | Usage guidelines | ⬜ |
