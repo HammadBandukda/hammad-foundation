@@ -37,7 +37,8 @@ Deadline: submit **before 20 Nov 2026**. The target is 18 Nov, which leaves a da
 - **Open:**
   - [ ] Media team's reply on 2027 goals and the founding year (email sent 4 Nov)
   - [ ] Logos from before 2025 (Facebook profile-picture album, or ask the team)
-  - [ ] Upload the 9 Years image into Figma placeholder `3062:3956`
+  - [x] Upload the 9 Years image into Figma placeholder `3062:3956`
+  - [x] Reference board of Hammad's shared research: Figma 02d (`3132:4149`)
 - **Gate:** the open items are answered, or a decision is made to proceed without them (deadline 6 Nov).
 - **Capture:** the research board (02, 02b, 02c), one screenshot per section.
 
