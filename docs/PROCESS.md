@@ -14,9 +14,9 @@ Deadline: submit **before 20 Nov 2026**. The target is 18 Nov, which leaves a da
 | 5 | Refinement | ✅ T2 (gold 11, green ribbon), vector emblem traced |
 | 6 | System | ✅ `final/`: 21 SVG variants, outlined text, PNG @1x/2x/4x, favicon set |
 | 6b | Logo animation (final mark only) | ⬜ |
-| 7 | Applications | ⬜ |
-| 8 | Usage guidelines | ⬜ |
-| 9 | Presentation PDF | ⬜ |
+| 7 | Applications | ✅ Vector mockups in the deck (digital, apparel, signage, events, merch) |
+| 8 | Usage guidelines | ✅ Deck p.9–13 |
+| 9 | Presentation PDF | 🟡 v1 built: `final/HF-11-Years-Proposal-Hammad-Hanif-Bandukda.pdf` (19 pp), awaiting Hammad's review |
 | 10 | Production files | ⬜ |
 | 11 | Submission | ⬜ |
 | 12 | Portfolio case study | ⬜ |
